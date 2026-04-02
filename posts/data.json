@@ -1,0 +1,165 @@
+{
+  "categories": [
+    "全部",
+    "閱讀筆記",
+    "教養思考",
+    "時事觀點",
+    "醫療教育",
+    "生活健康"
+  ],
+  "posts": [
+    {
+      "slug": "vex-parent-questions",
+      "title": "關於 VEX，我常被家長們問到的一些問題？以及為什麼我們連續學這麼多年？",
+      "category": "教養思考",
+      "date": "2025-02-10",
+      "excerpt": "我有一個高二的女兒，一個國二的兒子，他們從五年前開始學 VEX，曾經一起組隊，也曾經分開組隊過，之後可能又會一起組隊。",
+      "image": "posts/images/vex-parent-questions/20250118_090938.jpg",
+      "readingTime": 6
+    },
+    {
+      "slug": "black-bear-academy",
+      "title": "黑熊學院舉辦的藍鵲行動：戰亂時，你能成功移動到避難點嗎？",
+      "category": "時事觀點",
+      "date": "2023-09-02",
+      "excerpt": "今天參加了黑熊學院的藍鵲行動，這是一場大型演訓，就像是一個模擬真實且讓大家思考如何生存的大地遊戲。",
+      "image": "posts/images/black-bear-academy/IMG_20230903_003512547_Femme.jpg",
+      "readingTime": 5
+    },
+    {
+      "slug": "ai-era-creative-parenting",
+      "title": "如何養出有創意且能面對未來的孩子？《AI世代的創意教養》推薦序",
+      "category": "教養思考",
+      "date": "2023-07-05",
+      "excerpt": "常聽到的教養主流言論，如果去深思的話，會發現許多矛盾之處。例如：專家分享如何限制孩子 3C 產品與網路使用的實用技巧；老師感嘆現在的孩子都在滑手機跟看影片，專注力下降趨勢很嚴重，呼籲要多讀書。",
+      "image": "posts/images/ai-era-creative-parenting/cover.jpg",
+      "readingTime": 8
+    },
+    {
+      "slug": "7-habits-last-lesson",
+      "title": "《與成功有約最後一堂課》：中年危機的實用工具書",
+      "category": "閱讀筆記",
+      "date": "2023-03-13",
+      "excerpt": "《與成功有約最後一堂課》（左邊這本），是提出「高效能人士的七個習慣」，寫成暢銷大作《與成功有約》（右邊這本）並啟發無數人的史蒂芬柯維，生前與女兒合作的最後一本著作。我自己蠻喜歡的，閱讀過程中，覺得值得日後再次思考，於是摺頁註記的部分不少。",
+      "image": "posts/images/7-habits-last-lesson/00_covers.jpg",
+      "readingTime": 14
+    },
+    {
+      "slug": "hanlin-online-school",
+      "title": "孩子學校進度跟不上，考試成績不理想，該怎麼辦？",
+      "category": "教養思考",
+      "date": "2023-03-10",
+      "excerpt": "在小孩教養筆記專頁上，有網友詢問，我們家孩子在自己有興趣的領域，如機器人、日文跟數學，都發展得不錯，課業部分不知道怎麼處理？",
+      "image": "posts/images/hanlin-online-school/00_cover.jpg",
+      "readingTime": 19
+    },
+    {
+      "slug": "department-team-issues",
+      "title": "問：科部內積極者少，我很努力想推但推不動，怎麼辦？",
+      "category": "醫療教育",
+      "date": "2023-02-22",
+      "excerpt": "問：校長好，我是年輕主治醫師，想請教職場環境的問題。由於科部人數眾多，許多人都沒什麼戰力，年輕的自掃門前雪，資深的都是準備退休，多一事不如少一事。",
+      "image": "posts/images/department-team-issues/running_physician.png",
+      "readingTime": 3
+    },
+    {
+      "slug": "resident-application-info",
+      "title": "關於 PGY 應徵住院醫師的一些現況，尤其熱門科。",
+      "category": "醫療教育",
+      "date": "2023-02-14",
+      "excerpt": "為了瞭解目前 PGY 應徵住院醫師的狀況，是不是真的進入了論文軍備競賽階段，我詢問了許多參與科部招收住院醫師的校友，以下是目前我所聽到的。",
+      "image": "posts/images/resident-application-info/apply_R.png",
+      "readingTime": 5
+    },
+    {
+      "slug": "scattered-stars",
+      "title": "那些散落的星星 讀後討論",
+      "category": "閱讀筆記",
+      "date": "2022-12-09",
+      "excerpt": "可自由使用網路跟各種數位工具，如果任何議題思考卡關，都可以跟爸爸討論形塑方向喔！昀靜上完完整的作文訓練，字數請照建議。鎮宇還在練習中，字數可以減半。",
+      "image": "",
+      "readingTime": 3
+    },
+    {
+      "slug": "li-shaorong-book",
+      "title": "從放射科醫師到新思惟國際：我的人生體悟",
+      "category": "閱讀筆記",
+      "date": "2022-11-20",
+      "excerpt": "李紹榕學長說，我的醫學生涯蠻特別，希望我分享一些對年輕朋友有幫助的內容。認真想了一下，覺得我也只是照著自己想的路去實踐，而新一代又一代的年輕人們，他們的文化背景、社會氛圍、價值觀型塑、資訊取得，都跟我們不一樣，我不太確定是否真能有幫助。",
+      "image": "posts/images/li-shaorong-book/00_MEPA_20221112_1007.jpg",
+      "readingTime": 39
+    },
+    {
+      "slug": "dunhuang-spaceship",
+      "title": "敦煌壁畫中的太空船",
+      "category": "時事觀點",
+      "date": "2022-10-23",
+      "excerpt": "敦煌壁畫中，有沒有太空船？這個問題引發了許多有趣的討論。透過一系列圖文，重新認識這個考古與想像力之間的話題。",
+      "image": "posts/images/dunhuang-spaceship/01.jpg",
+      "readingTime": 14
+    },
+    {
+      "slug": "lbv-laser-experience",
+      "title": "是的，我去做老花雷射 Presbyond LBV 了！評估過程與心得。",
+      "category": "生活健康",
+      "date": "2022-10-18",
+      "excerpt": "許多朋友知道，我之前評估老花雷射好一陣子，可能因為我在同儕間就是給人做事嚴謹且重視細節的印象，許多正在猶豫的同學朋友說，「你在評估喔？太好了，我們等你分享。」因為他們知道，我一定會讀過各種文獻、用各種方式評估，會是高品質的決策。",
+      "image": "posts/images/lbv-laser-experience/01_combine2.png",
+      "readingTime": 15
+    },
+    {
+      "slug": "roc-4",
+      "title": "【陪你看國際新聞】蛤？中華民國 4.0？",
+      "category": "時事觀點",
+      "date": "2022-09-27",
+      "excerpt": "很多關於中華民國的討論，會變成吵架跟各說各話，是因為我們沒有共同的框架，所講的「中華民國」並不一樣。",
+      "image": "posts/images/roc-4/00_taipei101.jpg",
+      "readingTime": 5
+    },
+    {
+      "slug": "problem-solving-skill",
+      "title": "關於孩子們「解決問題的能力」的一些想法",
+      "category": "教養思考",
+      "date": "2022-09-10",
+      "excerpt": "世界變複雜得很快，辨認問題，並想辦法解決問題的能力，比以前重要非常多。",
+      "image": "posts/images/problem-solving-skill/IMG_20220826_141853501_Gothic.jpg",
+      "readingTime": 3
+    },
+    {
+      "slug": "nordic-parenting",
+      "title": "關於北歐教養的一些想法",
+      "category": "教養思考",
+      "date": "2022-09-10",
+      "excerpt": "臺灣的教養出版，有個熱門主題，是分享北歐的自由尊重的教育方式。",
+      "image": "posts/images/nordic-parenting/20220910_194029000.jpg",
+      "readingTime": 4
+    },
+    {
+      "slug": "history-geography-school",
+      "title": "開學後，孩子發現社會要上中國歷史、中國地理，非常排斥，怎麼辦？",
+      "category": "教養思考",
+      "date": "2022-09-01",
+      "excerpt": "問：校長好，不知道能否冒昧請教您一個難題？我的兒子因為對中國極度厭惡，這幾天剛開學，發現這學期史地是中國史、中國地理，非常反感，他說願意學世界史、世界地理，為什麼要學這個？質疑是洗腦和統戰。爸爸對兒子的拒學態度非常生氣，我勉強想到一個理由，…",
+      "image": "posts/images/history-geography-school/20220901_165404.png",
+      "readingTime": 3
+    },
+    {
+      "slug": "synthesizing-mind",
+      "title": "《統合心智》：你的孩子有那些獨特才華，以及他日後可能有怎樣的成功？",
+      "category": "閱讀筆記",
+      "date": "2022-07-21",
+      "excerpt": "這本書是「多元智能 (Multiple Intelligences)」的理論發明人霍華德·加德納的回憶錄。",
+      "image": "posts/images/synthesizing-mind/P_20220721_002051-01.jpeg",
+      "readingTime": 11
+    },
+    {
+      "slug": "abe-grand-strategy",
+      "title": "《安倍晉三大戰略》：認識近十年的日本國家戰略",
+      "category": "閱讀筆記",
+      "date": "2022-07-17",
+      "excerpt": "安倍晉三先生在 7 月 8 日遇刺身亡，之後的各種哀悼與報導，以及中國小粉紅們展示的各種離譜下限（文字、影片、商家），都將是一個世代的共同回憶。",
+      "image": "posts/images/abe-grand-strategy/20220717_122455.png",
+      "readingTime": 12
+    }
+  ]
+}
