@@ -114,12 +114,13 @@ def read_docx_content(path):
 
     return result
 
-def content_to_html(content_items, slug, folder_imgs):
+def content_to_html(content_items, slug, folder_imgs, title=""):
     """Convert content items to HTML, inserting images at their original positions.
     folder_imgs is the sorted list of image filenames in the folder.
     The first image is used as hero/cover, so inline images skip index 0."""
     parts = []
     text_idx = 0  # track which text paragraph we're on
+    img_alt = title if title else slug.replace('-', ' ')
 
     for item in content_items:
         if item[0] == 'image':
@@ -128,7 +129,7 @@ def content_to_html(content_items, slug, folder_imgs):
                 img_file = folder_imgs[img_idx]
                 # Skip the cover image (index 0) since it's shown as hero
                 if img_idx > 0:
-                    parts.append(f'<figure class="article-img"><img src="images/{slug}/{img_file}" alt="" loading="lazy"></figure>')
+                    parts.append(f'<figure class="article-img"><img src="images/{slug}/{img_file}" alt="{img_alt}" loading="lazy"></figure>')
             continue
 
         # Text paragraph
@@ -149,7 +150,7 @@ def content_to_html(content_items, slug, folder_imgs):
         elif (p.startswith('答：') or p.startswith('答:')) and is_bold:
             parts.append(f'<p class="qa-a"><strong>{p}</strong></p>')
         elif is_bold and text_idx > 0:
-            parts.append(f'<h3>{p}</h3>')
+            parts.append(f'<h2>{p}</h2>')
         else:
             parts.append(f'<p>{p}</p>')
 
@@ -263,7 +264,7 @@ header{position:sticky;top:0;z-index:100;background:#1A1814;border-bottom:1px so
 h1{font-family:"Noto Serif TC",serif;font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.4;letter-spacing:0.5px;margin-bottom:28px;}
 .article-body{font-size:17px;line-height:2;color:var(--text);}
 .article-body p{margin-bottom:1.4em;}
-.article-body h3{font-family:"Noto Serif TC",serif;font-size:19px;font-weight:700;margin:2em 0 0.8em;border-left:4px solid var(--accent);padding-left:12px;}
+.article-body h2{font-family:"Noto Serif TC",serif;font-size:19px;font-weight:700;margin:2em 0 0.8em;border-left:4px solid var(--accent);padding-left:12px;}
 .article-body .qa-q{background:#FDF0E8;border-left:4px solid var(--accent);padding:12px 16px;margin-bottom:0.6em;border-radius:0 8px 8px 0;font-weight:700;color:var(--accent);}
 .article-body .qa-a{background:#FAFAF8;border-left:4px solid #CCC;padding:12px 16px;margin-bottom:1.4em;border-radius:0 8px 8px 0;}
 .article-body iframe{width:100%;aspect-ratio:16/9;border:none;margin:1.5em 0;border-radius:8px;}
@@ -299,8 +300,13 @@ footer a{color:var(--accent);text-decoration:none;}
         f'<meta property="og:image" content="{og_img_url}">',
         f'<meta property="og:image:width" content="1200">',
         f'<meta property="og:image:height" content="628">',
+        f'<meta name="twitter:title" content="{title} | IC 觀點">',
+        f'<meta name="twitter:description" content="{og_desc}">',
         f'<meta name="twitter:image" content="{og_img_url}">',
+        f'<meta property="og:site_name" content="IC 觀點">',
         f'<meta property="article:published_time" content="{date_str}">',
+        f'<meta property="article:author" content="蔡依橙">',
+        f'<meta property="article:section" content="{category}">',
         f'<script type="application/ld+json">{ld_json_str}</script>',
         f'<script type="application/ld+json">{ld_bread_str}</script>',
         STATIC_CSS,
@@ -383,7 +389,7 @@ for folder_name, meta in ARTICLES_META.items():
             excerpt = get_excerpt(content_items)
             all_text = ''.join(item[1] for item in content_items if item[0] == 'text')
             reading_time = max(3, len(all_text) // 300)
-            content_html = content_to_html(content_items, slug, [])
+            content_html = content_to_html(content_items, slug, [], title)
             html = make_post_html(title, date_str, category, slug, "cover.jpg", content_html, excerpt, [], keywords=meta.get("keywords",""))
             with open(os.path.join(BASE_DST, "posts", f"{slug}.html"), "w", encoding="utf-8") as fout:
                 fout.write(html)
@@ -428,7 +434,7 @@ for folder_name, meta in ARTICLES_META.items():
     imgs = copy_images(src_folder, slug)
     cover_img = imgs[0] if imgs else ""
     # Images are now inlined by content_to_html, no extra_imgs needed
-    content_html = content_to_html(content_items, slug, imgs)
+    content_html = content_to_html(content_items, slug, imgs, title)
 
     # VEX article: images not embedded in Word, manually distribute across sections
     if slug == "vex-parent-questions" and len(imgs) > 1:
@@ -443,7 +449,7 @@ for folder_name, meta in ARTICLES_META.items():
         ]
         for marker, img_file in vex_img_insertions:
             if img_file and marker in content_html:
-                img_tag = f'\n<figure class="article-img"><img src="images/{slug}/{img_file}" alt="" loading="lazy"></figure>'
+                img_tag = f'\n<figure class="article-img"><img src="images/{slug}/{img_file}" alt="{title}" loading="lazy"></figure>'
                 content_html = content_html.replace(marker, marker + img_tag, 1)
 
     html = make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, [], keywords=meta.get("keywords",""))
@@ -507,13 +513,22 @@ print(f"\nDone: {generated} posts generated, data.json with {len(posts_index)} e
 
 # Generate RSS feed
 from xml.sax.saxutils import escape
+from email.utils import formatdate
+from time import mktime
+import time as _time
+
+def date_to_rfc822(date_str):
+    """Convert YYYY-MM-DD to RFC 822 format for RSS."""
+    t = _time.strptime(date_str, '%Y-%m-%d')
+    return formatdate(mktime(t), localtime=True)
+
 rss_items = []
 for post in posts_index[:20]:
     rss_items.append(f"""  <item>
     <title>{escape(post['title'])}</title>
     <link>https://ichentsaitw.github.io/ic-blog/posts/{post['slug']}.html</link>
     <guid>https://ichentsaitw.github.io/ic-blog/posts/{post['slug']}.html</guid>
-    <pubDate>{post['date']}</pubDate>
+    <pubDate>{date_to_rfc822(post['date'])}</pubDate>
     <description>{escape(post['excerpt'])}</description>
     <category>{escape(post['category'])}</category>
   </item>""")
@@ -525,6 +540,7 @@ rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
   <link>https://ichentsaitw.github.io/ic-blog/</link>
   <description>蔡依橙的個人部落格。關於教養、醫療教育、閱讀與時事的思考紀錄。</description>
   <language>zh-TW</language>
+  <lastBuildDate>{formatdate(localtime=True)}</lastBuildDate>
   <atom:link href="https://ichentsaitw.github.io/ic-blog/feed.xml" rel="self" type="application/rss+xml"/>
 {chr(10).join(rss_items)}
 </channel>
@@ -576,7 +592,7 @@ for post in posts_index:
         <span class="card-date">{date_display}</span>
         <span class="card-read">{read_min} 分鐘</span>
       </div>
-      <div class="card-title">{title_safe}</div>
+      <h3 class="card-title">{title_safe}</h3>
       <div class="card-excerpt">{excerpt_safe}</div>
       <div class="card-read-more">閱讀全文 →</div>
     </div>
@@ -591,35 +607,51 @@ cat_buttons = '\n    '.join(
     for cat in cat_list
 )
 
-# Replace empty grid with pre-rendered cards
-index_html = index_html.replace(
-    '<div class="articles-grid" id="articlesGrid"></div>',
-    f'<div class="articles-grid" id="articlesGrid">\n  {cards_html}\n</div>'
+# Replace grid content (works whether empty or pre-rendered)
+grid_start = index_html.find('<div class="articles-grid" id="articlesGrid">')
+grid_end_tag = '\n</div>\n  <div class="empty-state"'
+grid_end = index_html.find(grid_end_tag, grid_start)
+if grid_start >= 0 and grid_end >= 0:
+    index_html = (index_html[:grid_start] +
+        f'<div class="articles-grid" id="articlesGrid">\n  {cards_html}\n</div>' +
+        index_html[grid_end + len('\n</div>'):])
+else:
+    # Fallback: grid was empty
+    index_html = index_html.replace(
+        '<div class="articles-grid" id="articlesGrid"></div>',
+        f'<div class="articles-grid" id="articlesGrid">\n  {cards_html}\n</div>'
+    )
+
+# Replace category scroll (works whether empty or pre-rendered)
+index_html = re.sub(
+    r'<div class="category-scroll" id="catScroll">.*?</div>',
+    f'<div class="category-scroll" id="catScroll">\n    {cat_buttons}\n  </div>',
+    index_html, count=1, flags=re.DOTALL
 )
 
-# Replace empty category scroll with pre-rendered buttons
-index_html = index_html.replace(
-    '<div class="category-scroll" id="catScroll">\n    <!-- Populated by JS -->\n  </div>',
-    f'<div class="category-scroll" id="catScroll">\n    {cat_buttons}\n  </div>'
-)
-
-# Replace empty nav with pre-rendered links
+# Replace nav (works whether empty or pre-rendered)
 nav_links = '\n      '.join(
     f'<a href="#">{cat}</a>' for cat in cat_list
 )
-index_html = index_html.replace(
-    '<nav class="nav-desktop" id="catNavDesktop">\n      <!-- Populated by JS -->\n    </nav>',
-    f'<nav class="nav-desktop" id="catNavDesktop">\n      {nav_links}\n    </nav>'
+index_html = re.sub(
+    r'<nav class="nav-desktop" id="catNavDesktop">.*?</nav>',
+    f'<nav class="nav-desktop" id="catNavDesktop">\n      {nav_links}\n    </nav>',
+    index_html, count=1, flags=re.DOTALL
 )
 
-# Update post count
-index_html = index_html.replace(
-    '<span class="counter-number" id="postCount">—</span>',
-    f'<span class="counter-number" id="postCount">{len(posts_index)}</span>'
+# Update post count (works with any existing value)
+index_html = re.sub(
+    r'<span class="counter-number" id="postCount">[^<]*</span>',
+    f'<span class="counter-number" id="postCount">{len(posts_index)}</span>',
+    index_html
 )
 
-# Update last updated date
-index_html = index_html.replace('<!--LAST_UPDATED-->', BUILD_DATE)
+# Update last updated date (works with placeholder or existing date)
+index_html = re.sub(
+    r'<span id="lastUpdated">[^<]*</span>',
+    f'<span id="lastUpdated">{BUILD_DATE}</span>',
+    index_html
+)
 
 with open(index_path, "w", encoding="utf-8") as f:
     f.write(index_html)
