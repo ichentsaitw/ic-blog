@@ -1,1 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IC 觀點 — 思考與實踐的筆記</title>
+<meta name="description" content="蔡依橙的個人部落格。分享教養思考、閱讀筆記、醫療教育與時事觀點的真實紀錄。">
+<meta name="author" content="蔡依橙 IC">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ichentsaitw.github.io/ic-blog/">
 
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="IC 觀點 — 思考與實踐的筆記">
+<meta property="og:description" content="蔡依橙的個人部落格。分享教養思考、閱讀筆記、醫療教育與時事觀點的真實紀錄。">
+<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/">
+<meta property="og:image" content="https://ichentsaitw.github.io/ic-blog/og-cover.jpg">
+<meta property="og:site_name" content="IC 觀點">
+<meta property="og:locale" content="zh_TW">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IC 觀點 — 思考與實踐的筆記">
+<meta name="twitter:description" content="蔡依橙的個人部落格。分享教養思考、閱讀筆記、醫療教育與時事觀點的真實紀錄。">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="IC 觀點" href="https://ichentsaitw.github.io/ic-blog/feed.xml">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23C8602A'/%3E%3Ctext x='50' y='56' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='52' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Chart.js for Supabase trend -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZR4LYRZ7B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4ZR4LYRZ7B');
+</script>
+
+<!-- JSON-LD: Website structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "IC 觀點",
+  "description": "蔡依橙的個人部落格。分享教養思考、閱讀筆記、醫療教育與時事觀點的真實紀錄。",
+  "url": "https://ichentsaitw.github.io/ic-blog/",
+  "author": {
+    "@type": "Person",
+    "name": "蔡依橙",
+    "url": "https://ichentsaitw.github.io/ic-lab/"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg: #F9F7F4;
+    --card-bg: #FFFFFF;
+    --header-bg: #1A1814;
+    --text: #2C2825;
+    --text-light: #6B6460;
+    --text-muted: #A89890;
+    --border: #EAE4DC;
+    --accent: #C8602A;
+    --accent-light: #FDF0E8;
+    --accent-dark: #A0481C;
+    --shadow-sm: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    --shadow-md: 0 2px 8px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+    --radius: 16px;
+    --max-width: 1280px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+  }
+
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-text {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+
+  /* Desktop nav */
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-desktop a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .nav-desktop a:hover {
+    color: white;
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.2s;
+  }
+
+  .hamburger:hover { background: rgba(255,255,255,0.08); }
+
+  .hamburger svg { display: block; }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #1A1814;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 99;
+    padding: 12px 16px 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .mobile-menu.open { display: block; }
+
+  .mobile-menu a {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+
+  .mobile-menu a:hover {
+    color: white;
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, #1A1814 0%, #2D2318 60%, #3A2A18 100%);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+
+  .hero-label {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+  }
+
+  /* ===== SUPABASE COUNTER ===== */
+  .counter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .counter-item {
+    text-align: center;
+  }
+
+  .counter-number {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .counter-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .trend-mini {
+    width: 120px;
+    height: 40px;
+  }
+
+  /* ===== CATEGORY FILTER ===== */
+  .category-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 28px 24px 0;
+  }
+
+  .category-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .category-scroll::-webkit-scrollbar { display: none; }
+
+  .cat-btn {
+    flex-shrink: 0;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-light);
+    font-size: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .cat-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .cat-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    font-weight: 500;
+  }
+
+  /* ===== ARTICLE GRID ===== */
+  .articles-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 28px 24px 64px;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 580px) {
+    .articles-grid { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  /* ===== ARTICLE CARD ===== */
+  .article-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+
+    /* For lazy reveal animation */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.25s;
+  }
+
+  .article-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #EEE;
+  }
+
+  .card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
+
+  .article-card:hover .card-image-wrap img {
+    transform: scale(1.04);
+  }
+
+  .card-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  .card-body {
+    padding: 20px 20px 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .card-date::before { content: "📅 "; font-size: 10px; }
+  .card-read::before { content: "⏱ "; font-size: 10px; }
+
+  .card-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    margin: 0;
+  }
+
+  .card-excerpt {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-read-more {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s;
+  }
+
+  .article-card:hover .card-read-more { gap: 8px; }
+
+  /* ===== LOAD MORE ===== */
+  .load-trigger {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .load-spinner {
+    display: none;
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+
+  .load-spinner.active { display: block; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .no-more-msg {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: none;
+  }
+
+  /* ===== EMPTY STATE ===== */
+  .empty-state {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--text-muted);
+    display: none;
+  }
+
+  .empty-state .empty-icon { font-size: 48px; margin-bottom: 16px; }
+  .empty-state p { font-size: 15px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--header-bg);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer a:hover { text-decoration: underline; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .nav-desktop { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 48px 20px 40px; }
+    .counter-bar { padding: 16px 20px; gap: 24px; }
+    .category-section { padding: 20px 16px 0; }
+    .articles-section { padding: 20px 16px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="filterCategory('全部'); return false;">
+      <div class="logo-icon">IC</div>
+      <span class="logo-text">IC 觀點</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav-desktop" id="catNavDesktop">
+      <a href="#">全部</a>
+      <a href="#">閱讀筆記</a>
+      <a href="#">教養思考</a>
+      <a href="#">時事觀點</a>
+      <a href="#">醫療教育</a>
+      <a href="#">生活健康</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="選單" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="2" y1="6" x2="20" y2="6" id="hb-line1"/>
+        <line x1="2" y1="11" x2="20" y2="11" id="hb-line2"/>
+        <line x1="2" y1="16" x2="20" y2="16" id="hb-line3"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Populated by JS -->
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Personal Blog</div>
+  <h1>思考與實踐的筆記</h1>
+  <p>記錄一個跑步的醫師、創業者的日常觀察。<br>關於身體、工作、閱讀與生活的真實思考。</p>
+</section>
+
+<!-- SUPABASE COUNTER -->
+<div class="counter-bar">
+  <div class="counter-item">
+    <span class="counter-number" id="totalViews">—</span>
+    <span class="counter-label">累計瀏覽</span>
+  </div>
+  <div class="counter-item" id="trendItem" style="display:flex;align-items:center;gap:12px;">
+    <div>
+      <span class="counter-label" style="display:block;margin-bottom:4px;">7 天趨勢</span>
+      <canvas class="trend-mini" id="trendChart"></canvas>
+    </div>
+  </div>
+  <div class="counter-item">
+    <span class="counter-number" id="postCount">17</span>
+    <span class="counter-label">篇文章</span>
+  </div>
+</div>
+
+<!-- CATEGORY FILTER -->
+<div class="category-section">
+  <div class="category-scroll" id="catScroll">
+    <button class="cat-btn active" data-cat="全部">全部</button>
+    <button class="cat-btn" data-cat="閱讀筆記">閱讀筆記</button>
+    <button class="cat-btn" data-cat="教養思考">教養思考</button>
+    <button class="cat-btn" data-cat="時事觀點">時事觀點</button>
+    <button class="cat-btn" data-cat="醫療教育">醫療教育</button>
+    <button class="cat-btn" data-cat="生活健康">生活健康</button>
+  </div>
+</div>
+
+<!-- ARTICLE GRID -->
+<main class="articles-section">
+  <div class="articles-grid" id="articlesGrid">
+  <a class="article-card" href="posts/vex-parent-questions.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/vex-parent-questions/20250118_090938.jpg" alt="關於 VEX，我常被家長們問到的一些問題？以及為什麼我們連續學這麼多年？" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2025/02/10</span>
+        <span class="card-read">6 分鐘</span>
+      </div>
+      <h3 class="card-title">關於 VEX，我常被家長們問到的一些問題？以及為什麼我們連續學這麼多年？</h3>
+      <div class="card-excerpt">我有一個高二的女兒，一個國二的兒子，他們從五年前開始學 VEX，曾經一起組隊，也曾經分開組隊過，之後可能又會一起組隊。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/black-bear-academy.html" data-category="時事觀點">
+    <div class="card-image-wrap">
+      <img src="posts/images/black-bear-academy/IMG_20230903_003512547_Femme.jpg" alt="黑熊學院舉辦的藍鵲行動：戰亂時，你能成功移動到避難點嗎？" loading="lazy">
+      <span class="card-category">時事觀點</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/09/02</span>
+        <span class="card-read">5 分鐘</span>
+      </div>
+      <h3 class="card-title">黑熊學院舉辦的藍鵲行動：戰亂時，你能成功移動到避難點嗎？</h3>
+      <div class="card-excerpt">今天參加了黑熊學院的藍鵲行動，這是一場大型演訓，就像是一個模擬真實且讓大家思考如何生存的大地遊戲。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/ai-era-creative-parenting.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/ai-era-creative-parenting/cover.jpg" alt="如何養出有創意且能面對未來的孩子？《AI世代的創意教養》推薦序" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/07/05</span>
+        <span class="card-read">8 分鐘</span>
+      </div>
+      <h3 class="card-title">如何養出有創意且能面對未來的孩子？《AI世代的創意教養》推薦序</h3>
+      <div class="card-excerpt">常聽到的教養主流言論，如果去深思的話，會發現許多矛盾之處。例如：專家分享如何限制孩子 3C 產品與網路使用的實用技巧；老師感嘆現在的孩子都在滑手機跟看影片，專注力下降趨勢很嚴重，呼籲要多讀書。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/7-habits-last-lesson.html" data-category="閱讀筆記">
+    <div class="card-image-wrap">
+      <img src="posts/images/7-habits-last-lesson/00_covers.jpg" alt="《與成功有約最後一堂課》：中年危機的實用工具書" loading="lazy">
+      <span class="card-category">閱讀筆記</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/03/13</span>
+        <span class="card-read">14 分鐘</span>
+      </div>
+      <h3 class="card-title">《與成功有約最後一堂課》：中年危機的實用工具書</h3>
+      <div class="card-excerpt">《與成功有約最後一堂課》（左邊這本），是提出「高效能人士的七個習慣」，寫成暢銷大作《與成功有約》（右邊這本）並啟發無數人的史蒂芬柯維，生前與女兒合作的最後一本著作。我自己蠻喜歡的，閱讀過程中，覺得值得日後再次思考，於是摺頁註記的部分不少。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/hanlin-online-school.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/hanlin-online-school/00_cover.jpg" alt="孩子學校進度跟不上，考試成績不理想，該怎麼辦？" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/03/10</span>
+        <span class="card-read">19 分鐘</span>
+      </div>
+      <h3 class="card-title">孩子學校進度跟不上，考試成績不理想，該怎麼辦？</h3>
+      <div class="card-excerpt">在小孩教養筆記專頁上，有網友詢問，我們家孩子在自己有興趣的領域，如機器人、日文跟數學，都發展得不錯，課業部分不知道怎麼處理？</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/department-team-issues.html" data-category="醫療教育">
+    <div class="card-image-wrap">
+      <img src="posts/images/department-team-issues/running_physician.png" alt="問：科部內積極者少，我很努力想推但推不動，怎麼辦？" loading="lazy">
+      <span class="card-category">醫療教育</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/02/22</span>
+        <span class="card-read">3 分鐘</span>
+      </div>
+      <h3 class="card-title">問：科部內積極者少，我很努力想推但推不動，怎麼辦？</h3>
+      <div class="card-excerpt">不過，在醫院有個隱形的規矩，就是管好自己，不要管到別人。就像是，自己的住院病人要怎麼處理都可以，但不要去指指點點別人的醫療處置。真看不下去，就 take over 過來顧。這樣的規矩，是因為醫療講究權責相符，醫好了是你的成就感，搞砸了也得自…</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/resident-application-info.html" data-category="醫療教育">
+    <div class="card-image-wrap">
+      <img src="posts/images/resident-application-info/apply_R.png" alt="關於 PGY 應徵住院醫師的一些現況，尤其熱門科。" loading="lazy">
+      <span class="card-category">醫療教育</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2023/02/14</span>
+        <span class="card-read">5 分鐘</span>
+      </div>
+      <h3 class="card-title">關於 PGY 應徵住院醫師的一些現況，尤其熱門科。</h3>
+      <div class="card-excerpt">為了瞭解目前 PGY 應徵住院醫師的狀況，是不是真的進入了論文軍備競賽階段，我詢問了許多參與科部招收住院醫師的校友，以下是目前我所聽到的。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/scattered-stars.html" data-category="閱讀筆記">
+    <div class="card-image-wrap">
+      <img src="posts/images/scattered-stars/cover.jpg" alt="那些散落的星星 讀後討論" loading="lazy">
+      <span class="card-category">閱讀筆記</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/12/09</span>
+        <span class="card-read">3 分鐘</span>
+      </div>
+      <h3 class="card-title">那些散落的星星 讀後討論</h3>
+      <div class="card-excerpt">可自由使用網路跟各種數位工具，如果任何議題思考卡關，都可以跟爸爸討論形塑方向喔！Jin上完完整的作文訓練，字數請照建議。Yu還在練習中，字數可以減半。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/li-shaorong-book.html" data-category="閱讀筆記">
+    <div class="card-image-wrap">
+      <img src="posts/images/li-shaorong-book/00_MEPA_20221112_1007.jpg" alt="從放射科醫師到新思惟國際：我的人生體悟" loading="lazy">
+      <span class="card-category">閱讀筆記</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/11/20</span>
+        <span class="card-read">39 分鐘</span>
+      </div>
+      <h3 class="card-title">從放射科醫師到新思惟國際：我的人生體悟</h3>
+      <div class="card-excerpt">李紹榕學長說，我的醫學生涯蠻特別，希望我分享一些對年輕朋友有幫助的內容。認真想了一下，覺得我也只是照著自己想的路去實踐，而新一代又一代的年輕人們，他們的文化背景、社會氛圍、價值觀型塑、資訊取得，都跟我們不一樣，我不太確定是否真能有幫助。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/dunhuang-spaceship.html" data-category="時事觀點">
+    <div class="card-image-wrap">
+      <img src="posts/images/dunhuang-spaceship/01.jpg" alt="敦煌壁畫中的太空船" loading="lazy">
+      <span class="card-category">時事觀點</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/10/23</span>
+        <span class="card-read">14 分鐘</span>
+      </div>
+      <h3 class="card-title">敦煌壁畫中的太空船</h3>
+      <div class="card-excerpt">敦煌壁畫中，有沒有太空船？這個問題引發了許多有趣的討論。透過一系列圖文，重新認識這個考古與想像力之間的話題。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/lbv-laser-experience.html" data-category="生活健康">
+    <div class="card-image-wrap">
+      <img src="posts/images/lbv-laser-experience/01_combine2.png" alt="是的，我去做老花雷射 Presbyond LBV 了！評估過程與心得。" loading="lazy">
+      <span class="card-category">生活健康</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/10/18</span>
+        <span class="card-read">15 分鐘</span>
+      </div>
+      <h3 class="card-title">是的，我去做老花雷射 Presbyond LBV 了！評估過程與心得。</h3>
+      <div class="card-excerpt">許多朋友知道，我之前評估老花雷射好一陣子，可能因為我在同儕間就是給人做事嚴謹且重視細節的印象，許多正在猶豫的同學朋友說，「你在評估喔？太好了，我們等你分享。」因為他們知道，我一定會讀過各種文獻、用各種方式評估，會是高品質的決策。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/roc-4.html" data-category="時事觀點">
+    <div class="card-image-wrap">
+      <img src="posts/images/roc-4/00_taipei101.jpg" alt="【陪你看國際新聞】蛤？中華民國 4.0？" loading="lazy">
+      <span class="card-category">時事觀點</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/09/27</span>
+        <span class="card-read">5 分鐘</span>
+      </div>
+      <h3 class="card-title">【陪你看國際新聞】蛤？中華民國 4.0？</h3>
+      <div class="card-excerpt">很多關於中華民國的討論，會變成吵架跟各說各話，是因為我們沒有共同的框架，所講的「中華民國」並不一樣。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/problem-solving-skill.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/problem-solving-skill/IMG_20220826_141853501_Gothic.jpg" alt="關於孩子們「解決問題的能力」的一些想法" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/09/10</span>
+        <span class="card-read">3 分鐘</span>
+      </div>
+      <h3 class="card-title">關於孩子們「解決問題的能力」的一些想法</h3>
+      <div class="card-excerpt">世界變複雜得很快，辨認問題，並想辦法解決問題的能力，比以前重要非常多。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/nordic-parenting.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/nordic-parenting/20220910_194029000.jpg" alt="關於北歐教養的一些想法" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/09/10</span>
+        <span class="card-read">4 分鐘</span>
+      </div>
+      <h3 class="card-title">關於北歐教養的一些想法</h3>
+      <div class="card-excerpt">臺灣的教養出版，有個熱門主題，是分享北歐的自由尊重的教育方式。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/history-geography-school.html" data-category="教養思考">
+    <div class="card-image-wrap">
+      <img src="posts/images/history-geography-school/20220901_165404.png" alt="開學後，孩子發現社會要上中國歷史、中國地理，非常排斥，怎麼辦？" loading="lazy">
+      <span class="card-category">教養思考</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/09/01</span>
+        <span class="card-read">3 分鐘</span>
+      </div>
+      <h3 class="card-title">開學後，孩子發現社會要上中國歷史、中國地理，非常排斥，怎麼辦？</h3>
+      <div class="card-excerpt">問：校長好，不知道能否冒昧請教您一個難題？我的兒子因為對中國極度厭惡，這幾天剛開學，發現這學期史地是中國史、中國地理，非常反感，他說願意學世界史、世界地理，為什麼要學這個？質疑是洗腦和統戰。爸爸對兒子的拒學態度非常生氣，我勉強想到一個理由，…</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/synthesizing-mind.html" data-category="閱讀筆記">
+    <div class="card-image-wrap">
+      <img src="posts/images/synthesizing-mind/P_20220721_002051-01.jpeg" alt="《統合心智》：你的孩子有那些獨特才華，以及他日後可能有怎樣的成功？" loading="lazy">
+      <span class="card-category">閱讀筆記</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/07/21</span>
+        <span class="card-read">11 分鐘</span>
+      </div>
+      <h3 class="card-title">《統合心智》：你的孩子有那些獨特才華，以及他日後可能有怎樣的成功？</h3>
+      <div class="card-excerpt">這本書是「多元智能 (Multiple Intelligences)」的理論發明人霍華德·加德納的回憶錄。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+  <a class="article-card" href="posts/abe-grand-strategy.html" data-category="閱讀筆記">
+    <div class="card-image-wrap">
+      <img src="posts/images/abe-grand-strategy/20220717_122455.png" alt="《安倍晉三大戰略》：認識近十年的日本國家戰略" loading="lazy">
+      <span class="card-category">閱讀筆記</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">2022/07/17</span>
+        <span class="card-read">12 分鐘</span>
+      </div>
+      <h3 class="card-title">《安倍晉三大戰略》：認識近十年的日本國家戰略</h3>
+      <div class="card-excerpt">安倍晉三先生在 7 月 8 日遇刺身亡，之後的各種哀悼與報導，以及中國小粉紅們展示的各種離譜下限（文字、影片、商家），都將是一個世代的共同回憶。</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>
+</div>
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">✍️</div>
+    <p>這個分類還沒有文章</p>
+  </div>
+  <div class="load-trigger" id="loadTrigger">
+    <div class="load-spinner" id="loadSpinner"></div>
+    <span class="no-more-msg" id="noMoreMsg">— 已顯示全部文章 —</span>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>IC 觀點 · 蔡依橙的個人部落格</p>
+  <p style="font-size:12px;color:rgba(255,255,255,0.35);">最後更新：<span id="lastUpdated">2026-04-02</span></p>
+  <p><a href="https://ichentsaitw.github.io/ic-lab/" target="_blank" rel="noopener">← 回到 IC-LAB</a></p>
+</footer>
+
+<script>
+// ===== CONFIG =====
+const SUPABASE_URL = 'https://dypkogwrsqtonefaodiv.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cGtvZ3dyc3F0b25lZmFvZGl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MDg2NzMsImV4cCI6MjA4OTk4NDY3M30.Qqh4V7_yumS5TnrV5Eora6VrC3T1bjbdTl7Pd2s-Tw4';
+const SITE_ID = 'ic-blog-gh';
+const POSTS_PER_PAGE = 6;
+
+// ===== STATE =====
+let allCards = [];       // All pre-rendered card DOM elements
+let filteredCards = [];   // Cards matching current category
+let displayedCount = 0;
+let currentCategory = '全部';
+let isLoading = false;
+let trendChartInstance = null;
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  initCards();
+  initCategoryNav();
+  initSupabase();
+  initHamburger();
+});
+
+// ===== INIT CARDS (from pre-rendered HTML) =====
+function initCards() {
+  const grid = document.getElementById('articlesGrid');
+  allCards = Array.from(grid.querySelectorAll('.article-card'));
+  // Hide all initially, will reveal via lazy load
+  allCards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.remove('visible');
+  });
+  filterCategory('全部');
+}
+
+// ===== INIT CATEGORY NAV =====
+function initCategoryNav() {
+  // Wire up pre-rendered category buttons
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => filterCategory(btn.dataset.cat));
+  });
+
+  // Wire up desktop nav links
+  document.querySelectorAll('#catNavDesktop a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      filterCategory(a.textContent);
+      toggleMobile(false);
+    });
+  });
+
+  // Build mobile menu from categories
+  const mobileMenu = document.getElementById('mobileMenu');
+  const cats = Array.from(document.querySelectorAll('.cat-btn')).map(b => b.dataset.cat);
+  mobileMenu.innerHTML = '';
+  cats.forEach(cat => {
+    const a = document.createElement('a');
+    a.href = '#';
+    a.textContent = cat;
+    a.addEventListener('click', e => { e.preventDefault(); filterCategory(cat); toggleMobile(false); });
+    mobileMenu.appendChild(a);
+  });
+}
+
+// ===== FILTER =====
+function filterCategory(cat) {
+  currentCategory = cat;
+  displayedCount = 0;
+
+  // Hide all cards
+  allCards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.remove('visible');
+  });
+
+  // Filter
+  filteredCards = cat === '全部'
+    ? [...allCards]
+    : allCards.filter(card => card.dataset.category === cat);
+
+  document.getElementById('noMoreMsg').style.display = 'none';
+
+  // Update active states
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.cat === cat);
+  });
+  const navLinks = document.querySelectorAll('#catNavDesktop a');
+  navLinks.forEach(a => {
+    const match = a.textContent === cat;
+    a.style.color = match ? 'white' : 'rgba(255,255,255,0.7)';
+    a.style.background = match ? 'rgba(200,96,42,0.3)' : '';
+  });
+
+  loadMore();
+}
+
+// ===== LOAD MORE =====
+function loadMore() {
+  if (isLoading) return;
+  const empty = document.getElementById('emptyState');
+
+  if (filteredCards.length === 0) {
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  const batch = filteredCards.slice(displayedCount, displayedCount + POSTS_PER_PAGE);
+  if (batch.length === 0) {
+    document.getElementById('noMoreMsg').style.display = 'block';
+    return;
+  }
+
+  isLoading = true;
+  document.getElementById('loadSpinner').classList.add('active');
+
+  setTimeout(() => {
+    batch.forEach((card, idx) => {
+      card.style.display = '';
+      setTimeout(() => card.classList.add('visible'), idx * 60);
+    });
+
+    displayedCount += batch.length;
+    isLoading = false;
+    document.getElementById('loadSpinner').classList.remove('active');
+
+    if (displayedCount >= filteredCards.length) {
+      document.getElementById('noMoreMsg').style.display = displayedCount > POSTS_PER_PAGE ? 'block' : 'none';
+    }
+  }, 200);
+}
+
+// ===== INTERSECTION OBSERVER (lazy load on scroll) =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !isLoading) {
+      loadMore();
+    }
+  });
+}, { rootMargin: '200px' });
+
+observer.observe(document.getElementById('loadTrigger'));
+
+// ===== HAMBURGER =====
+function initHamburger() {
+  const btn = document.getElementById('hamburgerBtn');
+  btn.addEventListener('click', () => {
+    const open = document.getElementById('mobileMenu').classList.contains('open');
+    toggleMobile(!open);
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('header') && !e.target.closest('.mobile-menu')) {
+      toggleMobile(false);
+    }
+  });
+}
+
+function toggleMobile(open) {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
+  menu.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+}
+
+// ===== SUPABASE COUNTER =====
+async function initSupabase() {
+  try {
+    // Increment + get total
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_page_view`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`
+      },
+      body: JSON.stringify({ site: SITE_ID })
+    });
+    const total = await res.json();
+    animateCount(document.getElementById('totalViews'), total);
+
+    // Get 7-day trend
+    const trend = await fetch(
+      `${SUPABASE_URL}/rest/v1/page_views?site_id=eq.${SITE_ID}&order=view_date.desc&limit=7`,
+      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
+    );
+    const trendData = await trend.json();
+    renderTrendChart(trendData.reverse());
+  } catch (e) {
+    document.getElementById('totalViews').textContent = '—';
+    console.error('Supabase error:', e);
+  }
+}
+
+function animateCount(el, target) {
+  const duration = 1200;
+  const start = performance.now();
+  const animate = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target).toLocaleString();
+    if (progress < 1) requestAnimationFrame(animate);
+  };
+  requestAnimationFrame(animate);
+}
+
+function renderTrendChart(data) {
+  const canvas = document.getElementById('trendChart');
+  const ctx = canvas.getContext('2d');
+
+  const labels = data.map(d => {
+    const dt = new Date(d.view_date);
+    return `${dt.getMonth()+1}/${dt.getDate()}`;
+  });
+  const counts = data.map(d => d.count);
+
+  if (trendChartInstance) trendChartInstance.destroy();
+  trendChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: counts,
+        borderColor: '#C8602A',
+        backgroundColor: 'rgba(200,96,42,0.15)',
+        fill: true,
+        tension: 0.4,
+        pointRadius: 0,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: { x: { display: false }, y: { display: false } },
+      animation: { duration: 800 }
+    }
+  });
+}
+</script>
+</body>
+</html>
