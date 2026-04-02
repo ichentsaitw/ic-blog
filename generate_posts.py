@@ -476,3 +476,72 @@ rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 with open(os.path.join(BASE_DST, "feed.xml"), "w", encoding="utf-8") as fout:
     fout.write(rss_xml)
 print(f"RSS feed generated with {len(rss_items)} items")
+
+# === Pre-render article cards into index.html for SEO ===
+index_path = os.path.join(BASE_DST, "index.html")
+with open(index_path, "r", encoding="utf-8") as f:
+    index_html = f.read()
+
+# Build static card HTML for all posts
+cards_html_parts = []
+for post in posts_index:
+    date_parts = post['date'].split('-')
+    date_display = f"{date_parts[0]}/{date_parts[1]}/{date_parts[2]}"
+    read_min = post.get('readingTime', 5)
+    excerpt_safe = post['excerpt'].replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
+    title_safe = post['title'].replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
+    cards_html_parts.append(f'''<a class="article-card" href="posts/{post['slug']}.html" data-category="{post['category']}">
+    <div class="card-image-wrap">
+      <img src="{post['image']}" alt="{title_safe}" loading="lazy">
+      <span class="card-category">{post['category']}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">
+        <span class="card-date">{date_display}</span>
+        <span class="card-read">{read_min} 分鐘</span>
+      </div>
+      <div class="card-title">{title_safe}</div>
+      <div class="card-excerpt">{excerpt_safe}</div>
+      <div class="card-read-more">閱讀全文 →</div>
+    </div>
+  </a>''')
+
+cards_html = '\n  '.join(cards_html_parts)
+
+# Also pre-render category buttons
+cat_list = ["全部", "閱讀筆記", "教養思考", "時事觀點", "醫療教育", "生活健康"]
+cat_buttons = '\n    '.join(
+    f'<button class="cat-btn{" active" if cat == "全部" else ""}" data-cat="{cat}">{cat}</button>'
+    for cat in cat_list
+)
+
+# Replace empty grid with pre-rendered cards
+index_html = index_html.replace(
+    '<div class="articles-grid" id="articlesGrid"></div>',
+    f'<div class="articles-grid" id="articlesGrid">\n  {cards_html}\n</div>'
+)
+
+# Replace empty category scroll with pre-rendered buttons
+index_html = index_html.replace(
+    '<div class="category-scroll" id="catScroll">\n    <!-- Populated by JS -->\n  </div>',
+    f'<div class="category-scroll" id="catScroll">\n    {cat_buttons}\n  </div>'
+)
+
+# Replace empty nav with pre-rendered links
+nav_links = '\n      '.join(
+    f'<a href="#">{cat}</a>' for cat in cat_list
+)
+index_html = index_html.replace(
+    '<nav class="nav-desktop" id="catNavDesktop">\n      <!-- Populated by JS -->\n    </nav>',
+    f'<nav class="nav-desktop" id="catNavDesktop">\n      {nav_links}\n    </nav>'
+)
+
+# Update post count
+index_html = index_html.replace(
+    '<span class="counter-number" id="postCount">—</span>',
+    f'<span class="counter-number" id="postCount">{len(posts_index)}</span>'
+)
+
+with open(index_path, "w", encoding="utf-8") as f:
+    f.write(index_html)
+print(f"index.html updated with {len(posts_index)} pre-rendered cards")
