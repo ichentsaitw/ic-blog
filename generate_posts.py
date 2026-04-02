@@ -1,6 +1,9 @@
 import docx, os, json, shutil, re, sys
 from docx.oxml.ns import qn
+from datetime import datetime
 sys.stdout.reconfigure(encoding='utf-8')
+
+BUILD_DATE = datetime.now().strftime('%Y-%m-%d')
 
 BASE_SRC = r"C:\Users\silly\新思惟國際 Dropbox\Tsai I-Chen\!!00IC_documents\ClaudeCowork\blog-test"
 BASE_DST = r"C:\Users\silly\projects\ic-blog"
@@ -302,6 +305,7 @@ footer a{color:var(--accent);text-decoration:none;}
         extra_imgs_html,
         '</div></article>',
         '<footer><p>IC 觀點 · 蔡依橙的個人部落格</p>',
+        f'<p style="font-size:12px;color:rgba(255,255,255,0.35);">最後更新：{BUILD_DATE}</p>',
         '<p><a href="https://ichentsaitw.github.io/ic-lab/" target="_blank" rel="noopener">← 回到 IC-LAB</a></p></footer>',
         '</body>\n</html>'
     ]
@@ -541,6 +545,9 @@ index_html = index_html.replace(
     '<span class="counter-number" id="postCount">—</span>',
     f'<span class="counter-number" id="postCount">{len(posts_index)}</span>'
 )
+
+# Update last updated date
+index_html = index_html.replace('<!--LAST_UPDATED-->', BUILD_DATE)
 
 with open(index_path, "w", encoding="utf-8") as f:
     f.write(index_html)
