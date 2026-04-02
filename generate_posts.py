@@ -1,4 +1,5 @@
 import docx, os, json, shutil, re, sys
+from docx.oxml.ns import qn
 sys.stdout.reconfigure(encoding='utf-8')
 
 BASE_SRC = r"C:\Users\silly\新思惟國際 Dropbox\Tsai I-Chen\!!00IC_documents\ClaudeCowork\blog-test"
@@ -27,45 +28,89 @@ ARTICLES_META = {
     "20250210_VEX家長":                {"slug": "vex-parent-questions",        "category": "教養思考"},
 }
 
-def read_docx_paragraphs(path):
-    """Return list of (text, is_bold) tuples for non-empty paragraphs."""
+def read_docx_content(path):
+    """Return list of content items: ('text', text, is_bold) or ('image', img_index).
+    img_index is 0-based, matching the order images appear in the Word file,
+    which corresponds to sorted folder images."""
     d = docx.Document(path)
     result = []
+    img_counter = 0
+
     for p in d.paragraphs:
         text = p.text.strip()
+
+        # Check for embedded images in this paragraph
+        blips = p._element.findall('.//' + qn('a:blip'))
+        if blips:
+            for _ in blips:
+                result.append(('image', img_counter))
+                img_counter += 1
+
         if not text:
             continue
-        # Check if paragraph is bold: all non-empty runs are bold
+
+        # Check if paragraph is bold
         is_heading = 'Heading' in (p.style.name if p.style else '')
         runs_with_text = [r for r in p.runs if r.text.strip()]
         is_bold = all(r.bold for r in runs_with_text) if runs_with_text else False
-        result.append((text, is_bold or is_heading))
+        result.append(('text', text, is_bold or is_heading))
+
     return result
 
-def paras_to_html(paras):
-    """paras is list of (text, is_bold) tuples."""
+def content_to_html(content_items, slug, folder_imgs):
+    """Convert content items to HTML, inserting images at their original positions.
+    folder_imgs is the sorted list of image filenames in the folder.
+    The first image is used as hero/cover, so inline images skip index 0."""
     parts = []
-    for i, (p, is_bold) in enumerate(paras):
-        # Skip title (first para) and author line
-        if i == 0 or re.match(r'^(作者|讀者|Author)[:：]', p):
+    text_idx = 0  # track which text paragraph we're on
+
+    for item in content_items:
+        if item[0] == 'image':
+            img_idx = item[1]
+            if img_idx < len(folder_imgs):
+                img_file = folder_imgs[img_idx]
+                # Skip the cover image (index 0) since it's shown as hero
+                if img_idx > 0:
+                    parts.append(f'<figure class="article-img"><img src="images/{slug}/{img_file}" alt="" loading="lazy"></figure>')
             continue
+
+        # Text paragraph
+        _, p, is_bold = item
+
+        # Skip title (first text para) and author line
+        if text_idx == 0:
+            text_idx += 1
+            continue
+        if re.match(r'^(作者|讀者|Author)[:：]', p):
+            text_idx += 1
+            continue
+
         if p.startswith('<iframe'):
             parts.append(p)
         elif p.startswith('問：') or p.startswith('問:'):
             parts.append(f'<p class="qa-q">{p}</p>')
         elif (p.startswith('答：') or p.startswith('答:')) and is_bold:
             parts.append(f'<p class="qa-a"><strong>{p}</strong></p>')
-        elif is_bold and i > 0:
-            # Bold paragraph = subheading (h3)
+        elif is_bold and text_idx > 0:
             parts.append(f'<h3>{p}</h3>')
         else:
             parts.append(f'<p>{p}</p>')
+
+        text_idx += 1
+
     return '\n'.join(parts)
 
-def get_excerpt(paras):
-    """paras is list of (text, is_bold) tuples."""
+def get_excerpt(content_items):
+    """Extract excerpt from content items, skipping title, author, bold headings, images."""
     skip = [r'^(作者|讀者)[:：]', r'^[（(]', r'^http', r'^<iframe']
-    for p_text, is_bold in paras[1:]:
+    found_title = False
+    for item in content_items:
+        if item[0] != 'text':
+            continue
+        _, p_text, is_bold = item
+        if not found_title:
+            found_title = True
+            continue  # skip title
         if is_bold:
             continue
         if not any(re.match(pat, p_text) for pat in skip) and len(p_text) > 20:
@@ -228,19 +273,25 @@ for folder_name, meta in ARTICLES_META.items():
         continue
 
     try:
-        paras = read_docx_paragraphs(docx_path)
+        content_items = read_docx_content(docx_path)
     except Exception as e:
         print(f"ERROR: {folder_name}: {e}")
         continue
 
-    title = paras[0][0] if paras else folder_name
-    excerpt = get_excerpt(paras)
-    reading_time = max(3, len(''.join(p[0] for p in paras)) // 300)
+    # Extract title from first text item
+    title = folder_name
+    for item in content_items:
+        if item[0] == 'text':
+            title = item[1]
+            break
+    excerpt = get_excerpt(content_items)
+    all_text = ''.join(item[1] for item in content_items if item[0] == 'text')
+    reading_time = max(3, len(all_text) // 300)
     imgs = copy_images(src_folder, slug)
     cover_img = imgs[0] if imgs else ""
-    extra_imgs = imgs[1:] if len(imgs) > 1 else []
-    content_html = paras_to_html(paras)
-    html = make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, extra_imgs)
+    # Images are now inlined by content_to_html, no extra_imgs needed
+    content_html = content_to_html(content_items, slug, imgs)
+    html = make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, [])
     with open(os.path.join(BASE_DST, "posts", f"{slug}.html"), "w", encoding="utf-8") as fout:
         fout.write(html)
     posts_index.append({
@@ -248,7 +299,7 @@ for folder_name, meta in ARTICLES_META.items():
         "excerpt": excerpt, "image": f"posts/images/{slug}/{cover_img}" if cover_img else "",
         "readingTime": reading_time
     })
-    print(f"OK: {folder_name} ({len(paras)} paras, {len(imgs)} imgs)")
+    print(f"OK: {folder_name} ({len(content_items)} items, {len(imgs)} imgs)")
     generated += 1
 
 posts_index.sort(key=lambda x: x["date"], reverse=True)
