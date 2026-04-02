@@ -236,6 +236,7 @@ def make_post_html(title, date_str, category, slug, cover_img, content_html, exc
 <meta property="og:type" content="article">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ichentsai">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23C8602A'/%3E%3Ctext x='50' y='56' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='52' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -270,7 +271,16 @@ h1{font-family:"Noto Serif TC",serif;font-size:clamp(22px,4vw,32px);font-weight:
 .article-img img{width:100%;border-radius:12px;display:block;}
 footer{background:#1A1814;color:rgba(255,255,255,0.5);text-align:center;padding:28px 24px;font-size:13px;line-height:2;}
 footer a{color:var(--accent);text-decoration:none;}
-@media(max-width:600px){.article-wrap{padding:28px 16px 60px;}}
+.related{margin-top:3em;padding-top:2em;border-top:2px solid var(--border);}
+.related h2{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);}
+.related-list{display:grid;gap:12px;}
+.related-link{display:flex;gap:12px;text-decoration:none;color:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);transition:all 0.2s;}
+.related-link:hover{border-color:var(--accent);background:var(--accent-light,#FDF0E8);}
+.related-link img{width:120px;height:68px;object-fit:cover;border-radius:6px;flex-shrink:0;}
+.related-link .rl-text{display:flex;flex-direction:column;gap:4px;}
+.related-link .rl-cat{font-size:11px;color:var(--accent);font-weight:700;}
+.related-link .rl-title{font-size:15px;font-weight:500;line-height:1.4;}
+@media(max-width:600px){.article-wrap{padding:28px 16px 60px;}.related-link img{width:80px;height:45px;}}
 </style>'''
 
     keywords_meta = f'\n<meta name="keywords" content="{keywords}">' if keywords else ''
@@ -287,6 +297,9 @@ footer a{color:var(--accent);text-decoration:none;}
         f'<meta property="og:description" content="{og_desc}">',
         f'<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/posts/{slug}.html">',
         f'<meta property="og:image" content="{og_img_url}">',
+        f'<meta property="og:image:width" content="1200">',
+        f'<meta property="og:image:height" content="628">',
+        f'<meta name="twitter:image" content="{og_img_url}">',
         f'<meta property="article:published_time" content="{date_str}">',
         f'<script type="application/ld+json">{ld_json_str}</script>',
         f'<script type="application/ld+json">{ld_bread_str}</script>',
@@ -303,7 +316,9 @@ footer a{color:var(--accent);text-decoration:none;}
         '<div class="article-body">',
         content_html,
         extra_imgs_html,
-        '</div></article>',
+        '</div>',
+        '<!--RELATED_ARTICLES-->',
+        '</article>',
         '<footer><p>IC 觀點 · 蔡依橙的個人部落格</p>',
         f'<p style="font-size:12px;color:rgba(255,255,255,0.35);">最後更新：{BUILD_DATE}</p>',
         '<p><a href="https://ichentsaitw.github.io/ic-lab/" target="_blank" rel="noopener">← 回到 IC-LAB</a></p></footer>',
@@ -450,6 +465,44 @@ data_json = {
 with open(os.path.join(BASE_DST, "posts", "data.json"), "w", encoding="utf-8") as fout:
     json.dump(data_json, fout, ensure_ascii=False, indent=2)
 
+# === Second pass: inject related articles into each post ===
+print("\nInjecting related articles...")
+for post in posts_index:
+    # Find related: same category first, then recent, exclude self, max 3
+    same_cat = [p for p in posts_index if p["category"] == post["category"] and p["slug"] != post["slug"]]
+    others = [p for p in posts_index if p["category"] != post["category"] and p["slug"] != post["slug"]]
+    related = same_cat[:2] + others[:1] if len(same_cat) >= 2 else same_cat + others[:3-len(same_cat)]
+    related = related[:3]
+
+    if not related:
+        continue
+
+    links_html = []
+    for r in related:
+        r_title = r["title"].replace('"', '&quot;')
+        r_img = f'../{r["image"]}' if r.get("image") else ''
+        img_tag = f'<img src="{r_img}" alt="{r_title}" loading="lazy">' if r_img else ''
+        links_html.append(
+            f'<a href="{r["slug"]}.html" class="related-link">'
+            f'{img_tag}'
+            f'<div class="rl-text"><span class="rl-cat">{r["category"]}</span>'
+            f'<span class="rl-title">{r["title"]}</span></div></a>'
+        )
+
+    related_section = (
+        '<div class="related"><h2>相關閱讀</h2>'
+        '<div class="related-list">' + '\n'.join(links_html) + '</div></div>'
+    )
+
+    post_path = os.path.join(BASE_DST, "posts", f"{post['slug']}.html")
+    with open(post_path, "r", encoding="utf-8") as f:
+        html = f.read()
+    html = html.replace('<!--RELATED_ARTICLES-->', related_section)
+    with open(post_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+print(f"Related articles injected into {len(posts_index)} posts")
+
 print(f"\nDone: {generated} posts generated, data.json with {len(posts_index)} entries")
 
 # Generate RSS feed
@@ -480,6 +533,25 @@ rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 with open(os.path.join(BASE_DST, "feed.xml"), "w", encoding="utf-8") as fout:
     fout.write(rss_xml)
 print(f"RSS feed generated with {len(rss_items)} items")
+
+# Generate sitemap.xml with changefreq
+sitemap_entries = [f"""  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/</loc>
+    <lastmod>{BUILD_DATE}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>"""]
+for post in posts_index:
+    sitemap_entries.append(f"""  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/{post['slug']}.html</loc>
+    <lastmod>{post['date']}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>""")
+sitemap_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(sitemap_entries) + '\n</urlset>\n'
+with open(os.path.join(BASE_DST, "sitemap.xml"), "w", encoding="utf-8") as fout:
+    fout.write(sitemap_xml)
+print(f"Sitemap generated with {len(sitemap_entries)} URLs")
 
 # === Pre-render article cards into index.html for SEO ===
 index_path = os.path.join(BASE_DST, "index.html")

@@ -2,92 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ichentsaitw.github.io/ic-blog/</loc>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/abe-grand-strategy.html</loc>
-    <lastmod>2022-07-17</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/synthesizing-mind.html</loc>
-    <lastmod>2022-07-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/history-geography-school.html</loc>
-    <lastmod>2022-09-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/problem-solving-skill.html</loc>
-    <lastmod>2022-09-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/nordic-parenting.html</loc>
-    <lastmod>2022-09-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/roc-4.html</loc>
-    <lastmod>2022-09-27</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/lbv-laser-experience.html</loc>
-    <lastmod>2022-10-18</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/dunhuang-spaceship.html</loc>
-    <lastmod>2022-10-23</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/li-shaorong-book.html</loc>
-    <lastmod>2022-11-20</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/scattered-stars.html</loc>
-    <lastmod>2022-12-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/resident-application-info.html</loc>
-    <lastmod>2023-02-14</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/department-team-issues.html</loc>
-    <lastmod>2023-02-22</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/hanlin-online-school.html</loc>
-    <lastmod>2023-03-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/7-habits-last-lesson.html</loc>
-    <lastmod>2023-03-13</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/ai-era-creative-parenting.html</loc>
-    <lastmod>2023-07-05</lastmod>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/vex-parent-questions.html</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ichentsaitw.github.io/ic-blog/posts/black-bear-academy.html</loc>
     <lastmod>2023-09-02</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/vex-parent-questions.html</loc>
-    <lastmod>2025-02-10</lastmod>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/ai-era-creative-parenting.html</loc>
+    <lastmod>2023-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/7-habits-last-lesson.html</loc>
+    <lastmod>2023-03-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/hanlin-online-school.html</loc>
+    <lastmod>2023-03-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/department-team-issues.html</loc>
+    <lastmod>2023-02-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/resident-application-info.html</loc>
+    <lastmod>2023-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/scattered-stars.html</loc>
+    <lastmod>2022-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/li-shaorong-book.html</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/dunhuang-spaceship.html</loc>
+    <lastmod>2022-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/lbv-laser-experience.html</loc>
+    <lastmod>2022-10-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/roc-4.html</loc>
+    <lastmod>2022-09-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/problem-solving-skill.html</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/nordic-parenting.html</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/history-geography-school.html</loc>
+    <lastmod>2022-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/synthesizing-mind.html</loc>
+    <lastmod>2022-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsaitw.github.io/ic-blog/posts/abe-grand-strategy.html</loc>
+    <lastmod>2022-07-17</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
