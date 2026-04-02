@@ -8,24 +8,78 @@ BASE_DST = r"C:\Users\silly\projects\ic-blog"
 os.makedirs(os.path.join(BASE_DST, "posts", "images"), exist_ok=True)
 
 ARTICLES_META = {
-    "20220717_安倍晉三大戰略":         {"slug": "abe-grand-strategy",         "category": "閱讀筆記"},
-    "20220721_統合心智":               {"slug": "synthesizing-mind",           "category": "閱讀筆記"},
-    "20220901_不想念中國史中國地理":    {"slug": "history-geography-school",    "category": "教養思考"},
-    "20220910_解決問題的能力":          {"slug": "problem-solving-skill",       "category": "教養思考"},
-    "20220910_關於北歐教養的一些想法":  {"slug": "nordic-parenting",            "category": "教養思考"},
-    "20220927_中華民國4.0":            {"slug": "roc-4",                       "category": "時事觀點"},
-    "20221018_是的我去做老花雷射LBV了": {"slug": "lbv-laser-experience",        "category": "生活健康"},
-    "20221023_敦煌壁畫中的太空船":      {"slug": "dunhuang-spaceship",          "category": "時事觀點"},
-    "20221120_李紹榕主編的書":          {"slug": "li-shaorong-book",            "category": "閱讀筆記"},
-    "20221209_那些散落的星星":          {"slug": "scattered-stars",             "category": "閱讀筆記"},
-    "20221225_極限返航":               {"slug": "extreme-return",              "category": "閱讀筆記"},
-    "20230214_關於應徵住院醫師的一些資訊": {"slug": "resident-application-info","category": "醫療教育"},
-    "20230222_科部團隊問題":            {"slug": "department-team-issues",      "category": "醫療教育"},
-    "20230310_翰林雲端學院":            {"slug": "hanlin-online-school",        "category": "教養思考"},
-    "20230313_與成功有約最後一堂課":     {"slug": "7-habits-last-lesson",       "category": "閱讀筆記"},
-    "20230705_AI時代的創意教養":        {"slug": "ai-era-creative-parenting",   "category": "教養思考"},
-    "20230902_黑熊學院藍鵲行動":        {"slug": "black-bear-academy",          "category": "時事觀點"},
-    "20250210_VEX家長":                {"slug": "vex-parent-questions",        "category": "教養思考"},
+    "20220717_安倍晉三大戰略": {
+        "slug": "abe-grand-strategy", "category": "閱讀筆記",
+        "keywords": "安倍晉三,日本政治,大戰略,國際關係,台日關係,印太戰略,書評,閱讀筆記,蔡依橙"
+    },
+    "20220721_統合心智": {
+        "slug": "synthesizing-mind", "category": "閱讀筆記",
+        "keywords": "統合心智,多元智能,加德納,Howard Gardner,教育心理學,書評,孩子才華,閱讀筆記,蔡依橙"
+    },
+    "20220901_不想念中國史中國地理": {
+        "slug": "history-geography-school", "category": "教養思考",
+        "keywords": "中國歷史,中國地理,課綱,國中社會,教養,孩子教育,108課綱,蔡依橙"
+    },
+    "20220910_解決問題的能力": {
+        "slug": "problem-solving-skill", "category": "教養思考",
+        "keywords": "解決問題,Problem Solving,數位能力,孩子教育,教養思考,Word,PowerPoint,蔡依橙"
+    },
+    "20220910_關於北歐教養的一些想法": {
+        "slug": "nordic-parenting", "category": "教養思考",
+        "keywords": "北歐教養,丹麥教育,教養觀念,親子教育,教育比較,蔡依橙"
+    },
+    "20220927_中華民國4.0": {
+        "slug": "roc-4", "category": "時事觀點",
+        "keywords": "中華民國,台灣,國際新聞,忒修斯之船,國家認同,歷史觀,蔡依橙"
+    },
+    "20221018_是的我去做老花雷射LBV了": {
+        "slug": "lbv-laser-experience", "category": "生活健康",
+        "keywords": "老花雷射,Presbyond LBV,LASIK,近視雷射,遠見眼科,張聰麒,老花眼,醫療經驗,蔡依橙"
+    },
+    "20221023_敦煌壁畫中的太空船": {
+        "slug": "dunhuang-spaceship", "category": "時事觀點",
+        "keywords": "敦煌壁畫,太空船,考古,歷史,圖文分析,蔡依橙"
+    },
+    "20221120_李紹榕主編的書": {
+        "slug": "li-shaorong-book", "category": "閱讀筆記",
+        "keywords": "放射科醫師,新思惟國際,醫師職涯,創業,離開醫院,住院醫師,論文發表,蔡依橙"
+    },
+    "20221209_那些散落的星星": {
+        "slug": "scattered-stars", "category": "閱讀筆記",
+        "keywords": "那些散落的星星,讀後心得,難民,閱讀討論,親子共讀,蔡依橙"
+    },
+    "20221225_極限返航": {
+        "slug": "extreme-return", "category": "閱讀筆記",
+        "keywords": "極限返航,書評,閱讀筆記,蔡依橙"
+    },
+    "20230214_關於應徵住院醫師的一些資訊": {
+        "slug": "resident-application-info", "category": "醫療教育",
+        "keywords": "住院醫師,PGY,應徵,醫師求職,論文,醫學教育,熱門科別,蔡依橙"
+    },
+    "20230222_科部團隊問題": {
+        "slug": "department-team-issues", "category": "醫療教育",
+        "keywords": "醫院管理,科部經營,團隊合作,主治醫師,職場問題,醫療職場,蔡依橙"
+    },
+    "20230310_翰林雲端學院": {
+        "slug": "hanlin-online-school", "category": "教養思考",
+        "keywords": "翰林雲端學院,線上學習,國中課業,補習,自主學習,家長經驗,成績,蔡依橙"
+    },
+    "20230313_與成功有約最後一堂課": {
+        "slug": "7-habits-last-lesson", "category": "閱讀筆記",
+        "keywords": "與成功有約,七個習慣,史蒂芬柯維,中年危機,人生意義,書評,蔡依橙"
+    },
+    "20230705_AI時代的創意教養": {
+        "slug": "ai-era-creative-parenting", "category": "教養思考",
+        "keywords": "AI教育,創意教養,3C教養,人工智慧,孩子未來,推薦序,蔡依橙"
+    },
+    "20230902_黑熊學院藍鵲行動": {
+        "slug": "black-bear-academy", "category": "時事觀點",
+        "keywords": "黑熊學院,藍鵲行動,民防,防災演練,台灣安全,戰時準備,EDC,蔡依橙"
+    },
+    "20250210_VEX家長": {
+        "slug": "vex-parent-questions", "category": "教養思考",
+        "keywords": "VEX機器人,VEX IQ,VEX V5,機器人競賽,STEM教育,親子教育,家長經驗,蔡依橙"
+    },
 }
 
 def read_docx_content(path):
@@ -127,7 +181,7 @@ def copy_images(src_folder, slug):
             imgs.append(f)
     return imgs
 
-def make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, extra_imgs):
+def make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, extra_imgs, keywords=""):
     og_desc = excerpt.replace('"', '&quot;').replace("'", "&#39;")
     cover_url = f"images/{slug}/{cover_img}" if cover_img else ""
     og_img_url = f"https://ichentsaitw.github.io/ic-blog/posts/images/{slug}/{cover_img}" if cover_img else ""
@@ -138,9 +192,39 @@ def make_post_html(title, date_str, category, slug, cover_img, content_html, exc
 
     hero_html = f'<img class="hero-img" src="{cover_url}" alt="{title}">' if cover_img else ''
 
-    ld_json = ('{"@context":"https://schema.org","@type":"Article","headline":"' + title +
-               '","description":"' + og_desc + '","datePublished":"' + date_str +
-               '","author":{"@type":"Person","name":"蔡依橙"},"publisher":{"@type":"Organization","name":"IC 觀點","url":"https://ichentsaitw.github.io/ic-blog/"},"url":"https://ichentsaitw.github.io/ic-blog/posts/' + slug + '.html"}')
+    # Article structured data with image
+    ld_article = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": excerpt,
+        "datePublished": date_str,
+        "dateModified": date_str,
+        "author": {"@type": "Person", "name": "蔡依橙", "url": "https://ichentsaitw.github.io/ic-lab/"},
+        "publisher": {"@type": "Organization", "name": "IC 觀點", "url": "https://ichentsaitw.github.io/ic-blog/"},
+        "url": f"https://ichentsaitw.github.io/ic-blog/posts/{slug}.html",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": f"https://ichentsaitw.github.io/ic-blog/posts/{slug}.html"},
+        "articleSection": category,
+        "inLanguage": "zh-TW"
+    }
+    if og_img_url:
+        ld_article["image"] = {"@type": "ImageObject", "url": og_img_url}
+    if keywords:
+        ld_article["keywords"] = keywords
+
+    # Breadcrumb structured data
+    ld_breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "IC 觀點", "item": "https://ichentsaitw.github.io/ic-blog/"},
+            {"@type": "ListItem", "position": 2, "name": category, "item": f"https://ichentsaitw.github.io/ic-blog/#cat-{category}"},
+            {"@type": "ListItem", "position": 3, "name": title}
+        ]
+    }
+
+    ld_json_str = json.dumps(ld_article, ensure_ascii=False)
+    ld_bread_str = json.dumps(ld_breadcrumb, ensure_ascii=False)
 
     STATIC_HEAD = '''<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -186,18 +270,23 @@ footer a{color:var(--accent);text-decoration:none;}
 @media(max-width:600px){.article-wrap{padding:28px 16px 60px;}}
 </style>'''
 
+    keywords_meta = f'\n<meta name="keywords" content="{keywords}">' if keywords else ''
+
     parts = [
         '<!DOCTYPE html>\n<html lang="zh-Hant">\n<head>',
         STATIC_HEAD,
         f'<title>{title} | IC 觀點</title>',
         f'<meta name="description" content="{og_desc}">',
+        keywords_meta,
         f'<link rel="canonical" href="https://ichentsaitw.github.io/ic-blog/posts/{slug}.html">',
+        f'<link rel="alternate" type="application/rss+xml" title="IC 觀點" href="https://ichentsaitw.github.io/ic-blog/feed.xml">',
         f'<meta property="og:title" content="{title}">',
         f'<meta property="og:description" content="{og_desc}">',
         f'<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/posts/{slug}.html">',
         f'<meta property="og:image" content="{og_img_url}">',
         f'<meta property="article:published_time" content="{date_str}">',
-        f'<script type="application/ld+json">{ld_json}</script>',
+        f'<script type="application/ld+json">{ld_json_str}</script>',
+        f'<script type="application/ld+json">{ld_bread_str}</script>',
         STATIC_CSS,
         '</head>\n<body>',
         '<header><div class="hinner">',
@@ -248,13 +337,43 @@ for folder_name, meta in ARTICLES_META.items():
         title = "敦煌壁畫中的太空船"
         excerpt = "敦煌壁畫中，有沒有太空船？這個問題引發了許多有趣的討論。透過一系列圖文，重新認識這個考古與想像力之間的話題。"
         reading_time = max(3, len(imgs))
-        html = make_post_html(title, date_str, category, slug, cover, img_html, excerpt, [])
+        html = make_post_html(title, date_str, category, slug, cover, img_html, excerpt, [], keywords=meta.get("keywords",""))
         with open(os.path.join(BASE_DST, "posts", f"{slug}.html"), "w", encoding="utf-8") as fout:
             fout.write(html)
         posts_index.append({"slug": slug, "title": title, "category": category, "date": date_str,
                             "excerpt": excerpt, "image": f"posts/images/{slug}/{cover}", "readingTime": reading_time})
         print(f"OK (image-post): {folder_name} ({len(imgs)} images)")
         generated += 1
+        continue
+
+    # === scattered-stars: no images in folder, use pre-existing cover ===
+    if slug == "scattered-stars":
+        # Cover image already exists at posts/images/scattered-stars/cover.jpg (downloaded from Unsplash)
+        cover_path = os.path.join(BASE_DST, "posts", "images", slug, "cover.jpg")
+        if os.path.exists(cover_path):
+            pass  # keep existing cover
+        # Process docx normally but with this cover
+        docx_path = None
+        for f in os.listdir(src_folder):
+            if f.endswith('.docx'):
+                docx_path = os.path.join(src_folder, f)
+                break
+        if docx_path:
+            content_items = read_docx_content(docx_path)
+            title = "那些散落的星星 讀後討論"
+            excerpt = get_excerpt(content_items)
+            all_text = ''.join(item[1] for item in content_items if item[0] == 'text')
+            reading_time = max(3, len(all_text) // 300)
+            content_html = content_to_html(content_items, slug, [])
+            html = make_post_html(title, date_str, category, slug, "cover.jpg", content_html, excerpt, [], keywords=meta.get("keywords",""))
+            with open(os.path.join(BASE_DST, "posts", f"{slug}.html"), "w", encoding="utf-8") as fout:
+                fout.write(html)
+            posts_index.append({
+                "slug": slug, "title": title, "category": category, "date": date_str,
+                "excerpt": excerpt, "image": f"posts/images/{slug}/cover.jpg", "readingTime": reading_time
+            })
+            print(f"OK (special-cover): {folder_name}")
+            generated += 1
         continue
 
     # === Empty folder ===
@@ -291,7 +410,24 @@ for folder_name, meta in ARTICLES_META.items():
     cover_img = imgs[0] if imgs else ""
     # Images are now inlined by content_to_html, no extra_imgs needed
     content_html = content_to_html(content_items, slug, imgs)
-    html = make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, [])
+
+    # VEX article: images not embedded in Word, manually distribute across sections
+    if slug == "vex-parent-questions" and len(imgs) > 1:
+        # Insert images between paragraphs (use full closing/opening tags as markers)
+        vex_img_insertions = [
+            ('與全世界高手同場競技。</p>', imgs[3] if len(imgs)>3 else None),
+            ('只能打 support。</p>', imgs[4] if len(imgs)>4 else None),
+            ('這樣的經驗，最是難得。</p>', imgs[2] if len(imgs)>2 else None),
+            ('走得更遠。</p>', imgs[5] if len(imgs)>5 else None),
+            ('配到更好的隊伍。</p>', imgs[6] if len(imgs)>6 else None),
+            ('非常有意思。</p>', imgs[1] if len(imgs)>1 else None),
+        ]
+        for marker, img_file in vex_img_insertions:
+            if img_file and marker in content_html:
+                img_tag = f'\n<figure class="article-img"><img src="images/{slug}/{img_file}" alt="" loading="lazy"></figure>'
+                content_html = content_html.replace(marker, marker + img_tag, 1)
+
+    html = make_post_html(title, date_str, category, slug, cover_img, content_html, excerpt, [], keywords=meta.get("keywords",""))
     with open(os.path.join(BASE_DST, "posts", f"{slug}.html"), "w", encoding="utf-8") as fout:
         fout.write(html)
     posts_index.append({
@@ -311,3 +447,32 @@ with open(os.path.join(BASE_DST, "posts", "data.json"), "w", encoding="utf-8") a
     json.dump(data_json, fout, ensure_ascii=False, indent=2)
 
 print(f"\nDone: {generated} posts generated, data.json with {len(posts_index)} entries")
+
+# Generate RSS feed
+from xml.sax.saxutils import escape
+rss_items = []
+for post in posts_index[:20]:
+    rss_items.append(f"""  <item>
+    <title>{escape(post['title'])}</title>
+    <link>https://ichentsaitw.github.io/ic-blog/posts/{post['slug']}.html</link>
+    <guid>https://ichentsaitw.github.io/ic-blog/posts/{post['slug']}.html</guid>
+    <pubDate>{post['date']}</pubDate>
+    <description>{escape(post['excerpt'])}</description>
+    <category>{escape(post['category'])}</category>
+  </item>""")
+
+rss_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>IC 觀點</title>
+  <link>https://ichentsaitw.github.io/ic-blog/</link>
+  <description>蔡依橙的個人部落格。關於教養、醫療教育、閱讀與時事的思考紀錄。</description>
+  <language>zh-TW</language>
+  <atom:link href="https://ichentsaitw.github.io/ic-blog/feed.xml" rel="self" type="application/rss+xml"/>
+{chr(10).join(rss_items)}
+</channel>
+</rss>"""
+
+with open(os.path.join(BASE_DST, "feed.xml"), "w", encoding="utf-8") as fout:
+    fout.write(rss_xml)
+print(f"RSS feed generated with {len(rss_items)} items")
