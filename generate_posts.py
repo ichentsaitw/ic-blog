@@ -28,31 +28,48 @@ ARTICLES_META = {
 }
 
 def read_docx_paragraphs(path):
+    """Return list of (text, is_bold) tuples for non-empty paragraphs."""
     d = docx.Document(path)
-    return [p.text.strip() for p in d.paragraphs if p.text.strip()]
+    result = []
+    for p in d.paragraphs:
+        text = p.text.strip()
+        if not text:
+            continue
+        # Check if paragraph is bold: all non-empty runs are bold
+        is_heading = 'Heading' in (p.style.name if p.style else '')
+        runs_with_text = [r for r in p.runs if r.text.strip()]
+        is_bold = all(r.bold for r in runs_with_text) if runs_with_text else False
+        result.append((text, is_bold or is_heading))
+    return result
 
 def paras_to_html(paras):
+    """paras is list of (text, is_bold) tuples."""
     parts = []
-    for i, p in enumerate(paras):
+    for i, (p, is_bold) in enumerate(paras):
+        # Skip title (first para) and author line
         if i == 0 or re.match(r'^(作者|讀者|Author)[:：]', p):
             continue
         if p.startswith('<iframe'):
             parts.append(p)
         elif p.startswith('問：') or p.startswith('問:'):
             parts.append(f'<p class="qa-q">{p}</p>')
-        elif p.startswith('答：') or p.startswith('答:'):
-            parts.append(f'<p class="qa-a">{p}</p>')
-        elif len(p) < 25 and not re.search(r'[。！？…]$', p) and not re.match(r'^\d', p) and i > 2:
+        elif (p.startswith('答：') or p.startswith('答:')) and is_bold:
+            parts.append(f'<p class="qa-a"><strong>{p}</strong></p>')
+        elif is_bold and i > 0:
+            # Bold paragraph = subheading (h3)
             parts.append(f'<h3>{p}</h3>')
         else:
             parts.append(f'<p>{p}</p>')
     return '\n'.join(parts)
 
 def get_excerpt(paras):
+    """paras is list of (text, is_bold) tuples."""
     skip = [r'^(作者|讀者)[:：]', r'^[（(]', r'^http', r'^<iframe']
-    for p in paras[1:]:
-        if not any(re.match(pat, p) for pat in skip) and len(p) > 20:
-            return p[:120] + ('…' if len(p) > 120 else '')
+    for p_text, is_bold in paras[1:]:
+        if is_bold:
+            continue
+        if not any(re.match(pat, p_text) for pat in skip) and len(p_text) > 20:
+            return p_text[:120] + ('…' if len(p_text) > 120 else '')
     return ''
 
 def copy_images(src_folder, slug):
@@ -216,9 +233,9 @@ for folder_name, meta in ARTICLES_META.items():
         print(f"ERROR: {folder_name}: {e}")
         continue
 
-    title = paras[0] if paras else folder_name
+    title = paras[0][0] if paras else folder_name
     excerpt = get_excerpt(paras)
-    reading_time = max(3, len(''.join(paras)) // 300)
+    reading_time = max(3, len(''.join(p[0] for p in paras)) // 300)
     imgs = copy_images(src_folder, slug)
     cover_img = imgs[0] if imgs else ""
     extra_imgs = imgs[1:] if len(imgs) > 1 else []
