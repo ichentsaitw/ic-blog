@@ -35,8 +35,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- Chart.js for Supabase trend -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W62W54P820"></script>
@@ -280,11 +278,6 @@
     font-size: 12px;
     color: var(--text-muted);
     letter-spacing: 0.5px;
-  }
-
-  .trend-mini {
-    width: 120px;
-    height: 40px;
   }
 
   /* ===== CATEGORY FILTER ===== */
@@ -584,15 +577,13 @@
     <span class="counter-number" id="totalViews">—</span>
     <span class="counter-label">累計瀏覽</span>
   </div>
-  <div class="counter-item" id="trendItem" style="display:flex;align-items:center;gap:12px;">
-    <div>
-      <span class="counter-label" style="display:block;margin-bottom:4px;">7 天趨勢</span>
-      <canvas class="trend-mini" id="trendChart"></canvas>
-    </div>
-  </div>
   <div class="counter-item">
     <span class="counter-number" id="postCount">17</span>
     <span class="counter-label">篇文章</span>
+  </div>
+  <div class="counter-item">
+    <span class="counter-number" style="font-size:.9rem;">2026/4/2</span>
+    <span class="counter-label">最新更新</span>
   </div>
 </div>
 
@@ -897,7 +888,6 @@ let filteredCards = [];   // Cards matching current category
 let displayedCount = 0;
 let currentCategory = '全部';
 let isLoading = false;
-let trendChartInstance = null;
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -1064,13 +1054,6 @@ async function initSupabase() {
     const total = await res.json();
     animateCount(document.getElementById('totalViews'), total);
 
-    // Get 7-day trend
-    const trend = await fetch(
-      `${SUPABASE_URL}/rest/v1/page_views?site_id=eq.${SITE_ID}&order=view_date.desc&limit=7`,
-      { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
-    );
-    const trendData = await trend.json();
-    renderTrendChart(trendData.reverse());
   } catch (e) {
     document.getElementById('totalViews').textContent = '—';
     console.error('Supabase error:', e);
@@ -1089,39 +1072,6 @@ function animateCount(el, target) {
   requestAnimationFrame(animate);
 }
 
-function renderTrendChart(data) {
-  const canvas = document.getElementById('trendChart');
-  const ctx = canvas.getContext('2d');
-
-  const labels = data.map(d => {
-    const dt = new Date(d.view_date);
-    return `${dt.getMonth()+1}/${dt.getDate()}`;
-  });
-  const counts = data.map(d => d.count);
-
-  if (trendChartInstance) trendChartInstance.destroy();
-  trendChartInstance = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [{
-        data: counts,
-        borderColor: '#C8602A',
-        backgroundColor: 'rgba(200,96,42,0.15)',
-        fill: true,
-        tension: 0.4,
-        pointRadius: 0,
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: false,
-      plugins: { legend: { display: false }, tooltip: { enabled: false } },
-      scales: { x: { display: false }, y: { display: false } },
-      animation: { duration: 800 }
-    }
-  });
-}
 </script>
 </body>
 </html>
