@@ -376,15 +376,16 @@
 
   .card-image-wrap {
     position: relative;
-    aspect-ratio: 16 / 9;
     overflow: hidden;
-    background: #EEE;
+    background: #F0EDE8;
+    aspect-ratio: 16/9;
   }
 
   .card-image-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: transform 0.4s ease;
     display: block;
   }
@@ -568,7 +569,7 @@
 <section class="hero">
   <div class="hero-label">Personal Blog</div>
   <h1>思考與實踐的筆記</h1>
-  <p>記錄一個跑步的醫師、創業者的日常觀察。<br>關於身體、工作、閱讀與生活的真實思考。</p>
+  <p>蔡依橙的個人筆記。<br>關於思考、閱讀、教養，以及與世界真實互動的紀錄。</p>
 </section>
 
 <!-- SUPABASE COUNTER -->
@@ -584,18 +585,6 @@
   <div class="counter-item">
     <span class="counter-number" style="font-size:.9rem;">2026/4/3</span>
     <span class="counter-label">最新更新</span>
-  </div>
-</div>
-
-<!-- CATEGORY FILTER -->
-<div class="category-section">
-  <div class="category-scroll" id="catScroll">
-    <button class="cat-btn active" data-cat="全部">全部</button>
-    <button class="cat-btn" data-cat="閱讀筆記">閱讀筆記</button>
-    <button class="cat-btn" data-cat="教養思考">教養思考</button>
-    <button class="cat-btn" data-cat="時事觀點">時事觀點</button>
-    <button class="cat-btn" data-cat="醫療教育">醫療教育</button>
-    <button class="cat-btn" data-cat="生活健康">生活健康</button>
   </div>
 </div>
 
@@ -2124,7 +2113,7 @@
 <footer>
   <p>IC 觀點 · 蔡依橙的個人部落格</p>
   <p style="font-size:12px;color:rgba(255,255,255,0.35);">最後更新：<span id="lastUpdated">2026-04-03</span></p>
-  <p><a href="https://ichentsaitw.github.io/ic-lab/" target="_blank" rel="noopener">← 回到 IC-LAB</a></p>
+  <p><a href="index.html">← 回到 IC 觀點首頁</a></p>
 </footer>
 
 <script>
@@ -2163,23 +2152,18 @@ function initCards() {
 
 // ===== INIT CATEGORY NAV =====
 function initCategoryNav() {
-  // Wire up pre-rendered category buttons
-  document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.addEventListener('click', () => filterCategory(btn.dataset.cat));
-  });
-
   // Wire up desktop nav links
   document.querySelectorAll('#catNavDesktop a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
-      filterCategory(a.textContent);
+      filterCategory(a.textContent.trim());
       toggleMobile(false);
     });
   });
 
-  // Build mobile menu from categories
+  // Build mobile menu from hardcoded categories
   const mobileMenu = document.getElementById('mobileMenu');
-  const cats = Array.from(document.querySelectorAll('.cat-btn')).map(b => b.dataset.cat);
+  const cats = ['全部','閱讀筆記','教養思考','時事觀點','醫療教育','生活健康'];
   mobileMenu.innerHTML = '';
   cats.forEach(cat => {
     const a = document.createElement('a');
@@ -2208,10 +2192,7 @@ function filterCategory(cat) {
 
   document.getElementById('noMoreMsg').style.display = 'none';
 
-  // Update active states
-  document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.cat === cat);
-  });
+  // Update active states (nav links only now)
   const navLinks = document.querySelectorAll('#catNavDesktop a');
   navLinks.forEach(a => {
     const match = a.textContent === cat;

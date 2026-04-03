@@ -1,12 +1,11 @@
 {
   "version": "0.0.1",
-  "autoPort": true,
   "configurations": [
     {
-      "name": "ic-blog (本地預覽)",
-      "runtimeExecutable": "sh",
-      "runtimeArgs": ["-c", "python3 -m http.server ${PORT:-8080}"],
-      "port": 8080
+      "name": "ic-blog-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["serve.py", "5501"],
+      "port": 5501
     }
   ]
 }
