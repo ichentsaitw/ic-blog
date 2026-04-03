@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://ichentsaitw.github.io/ic-blog/sitemap.xml
+Sitemap: https://ichentsai.tw/ic-blog/sitemap.xml

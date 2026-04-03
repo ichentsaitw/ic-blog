@@ -1,109 +1,589 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://ichentsai.tw/ic-blog/</loc>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/vex-parent-questions.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260325-ai-usage-method.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260325-ai-brain-strength.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260323-ai-paper-responsibility.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260321-claude-code-data-extraction.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260320-geopolitics-startup.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260319-extreme-return-novel.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/chatgpt-doctor-second-opinion.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260318-katsushika-hokusai.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260316-talent-parenting.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260312-traffic-vs-conversion.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260310-gnosia-anime.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260309-publication-monthly.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260309-netflix-wbc.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260306-mdpi-review.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260228-nagasaki-pokemon.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260228-hosokawa-gracia.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260227-kokura-luck.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260213-principle-money.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260210-brain-fatigue.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260209-annapurna-run.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260207-everest-summit-lesson.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260204-everest-death-zone.html</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260203-tmb-cow-bells.html</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260202-tmb-utmb-route.html</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260202-exam-parenting-value.html</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260130-florence-cathedral-style.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260128-fuji-hut-controversy.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260127-taipei-building-climb.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260126-research-authorship-order.html</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260125-fuji-yoshida-shinto.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260124-newyork-scaffold-law.html</loc>
+    <lastmod>2026-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260120-glycogen-glico-osaka.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260116-saint-peter-basilica-history.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260115-st-peter-photography-challenge.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260114-marathon-slowdown-muscle-damage.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260113-marathon-recovery-road-surface.html</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260112-standard-chartered-medal-apology.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260112-ai-meta-analysis-check.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260112-taipei-marathon-observation.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260111-first-marathon-reflection.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260108-carb-loading-marathon.html</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260106-parenting-life-decision.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260105-sci-monthly-dec2025.html</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260104-peer-review-decision.html</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260101-marathon-shoe-selection.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20260101-marathon-training-gait.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251231-taichung-half-marathon.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251231-gemini-google-strategy.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251229-rome-marathon-history.html</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251229-meta-analysis-beginners.html</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251227-carbon-plate-shoe-trial.html</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251225-buying-ideal-self.html</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251224-euro-zero-banknote-pantheon.html</loc>
+    <lastmod>2025-12-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251223-blister-race-lesson.html</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251222-nma-vs-traditional-meta-analysis.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251222-economy-concentration-history.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251222-running-shoes-formal-class.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251219-ntu-10k-recovery-run.html</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251218-marathon-pheidippides-origin.html</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251218-space-computing-dyson.html</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251215-sci-research-topic-strategy.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251209-rome-castel-angelo-passetto.html</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251208-chatgpt-gemini-competition.html</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251204-life-is-one-take.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251202-rome-piazza-del-popolo-run.html</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251201-mentoring-student-selection.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251201-norovirus-recovery.html</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251127-chatgpt-vs-gemini-ai-tools.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251126-sci-submission-timing.html</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251118-london-marathon-history.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251117-meta-analysis-value-debate.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251113-london-marathon-plastic-bottles.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251113-chatgpt-sycophancy-research.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251111-nyc-marathon-running-form.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251105-sci-acceptance-timeline.html</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251103-tokyo-marathon-virtual-route.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251103-ai-learning-gap-widens.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251028-tokyo-marathon-quiet-culture.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251027-clinical-paper-meaning.html</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/20251021-boston-marathon-trivia.html</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichentsai.tw/ic-blog/posts/vex-parent-questions.html</loc>
     <lastmod>2025-02-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/black-bear-academy.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/black-bear-academy.html</loc>
     <lastmod>2023-09-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/ai-era-creative-parenting.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/ai-era-creative-parenting.html</loc>
     <lastmod>2023-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/7-habits-last-lesson.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/7-habits-last-lesson.html</loc>
     <lastmod>2023-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/hanlin-online-school.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/hanlin-online-school.html</loc>
     <lastmod>2023-03-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/department-team-issues.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/department-team-issues.html</loc>
     <lastmod>2023-02-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/resident-application-info.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/resident-application-info.html</loc>
     <lastmod>2023-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/scattered-stars.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/scattered-stars.html</loc>
     <lastmod>2022-12-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/li-shaorong-book.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/li-shaorong-book.html</loc>
     <lastmod>2022-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/dunhuang-spaceship.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/dunhuang-spaceship.html</loc>
     <lastmod>2022-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/lbv-laser-experience.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/lbv-laser-experience.html</loc>
     <lastmod>2022-10-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/roc-4.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/roc-4.html</loc>
     <lastmod>2022-09-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/problem-solving-skill.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/problem-solving-skill.html</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/nordic-parenting.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/nordic-parenting.html</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/history-geography-school.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/history-geography-school.html</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/synthesizing-mind.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/synthesizing-mind.html</loc>
     <lastmod>2022-07-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ichentsaitw.github.io/ic-blog/posts/abe-grand-strategy.html</loc>
+    <loc>https://ichentsai.tw/ic-blog/posts/abe-grand-strategy.html</loc>
     <lastmod>2022-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
