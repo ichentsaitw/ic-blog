@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="蔡依橙">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ichentsai">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23C8602A'/%3E%3Ctext x='50' y='56' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='52' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZR4LYRZ7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4ZR4LYRZ7B");</script>
+<title>AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來 | IC 觀點</title>
+<meta name="description" content="如果期刊社直接去函到你工作的醫院或學校，要求研究倫理委員會檢驗這篇論文——你是否能應付？AI 最好的角色是 research accelerator，而不是 research substitute。">
+<meta name="keywords" content="AI,論文,統合分析,SCI,學術發表,研究倫理,可重現性,蔡依橙">
+<link rel="canonical" href="https://ichentsaitw.github.io/ic-blog/posts/20260323-ai-paper-responsibility.html">
+<link rel="alternate" type="application/rss+xml" title="IC 觀點" href="https://ichentsaitw.github.io/ic-blog/feed.xml">
+<meta property="og:title" content="AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來">
+<meta property="og:description" content="如果期刊社直接去函到你工作的醫院或學校，要求研究倫理委員會檢驗這篇論文——你是否能應付？AI 最好的角色是 research accelerator，而不是 research substitute。">
+<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/posts/20260323-ai-paper-responsibility.html">
+<meta property="og:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20260323-ai-paper-responsibility/cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:title" content="AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來 | IC 觀點">
+<meta name="twitter:description" content="AI 最好的角色是 research accelerator，而不是 research substitute。">
+<meta name="twitter:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20260323-ai-paper-responsibility/cover.jpg">
+<meta property="og:site_name" content="IC 觀點">
+<meta property="article:published_time" content="2026-03-23">
+<meta property="article:author" content="蔡依橙">
+<meta property="article:section" content="醫療教育">
+<style>
+:root{--accent:#C8602A;--text:#2C2825;--text-light:#6B6460;--bg:#F9F7F4;--border:#EAE4DC;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans TC",-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+header{position:sticky;top:0;z-index:100;background:#1A1814;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hinner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:16px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:13px;color:white;}
+.logo-text{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16px;color:white;}
+.back-link{margin-left:auto;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.back-link:hover{color:white;}
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#EEE;max-height:520px;}
+.article-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px;}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.cat-badge{background:var(--accent);color:white;font-size:11px;font-weight:700;letter-spacing:0.8px;padding:3px 10px;border-radius:12px;}
+.meta-date{font-size:13px;color:var(--text-light);}
+h1{font-family:"Noto Serif TC",serif;font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.4;letter-spacing:0.5px;margin-bottom:28px;}
+.article-body{font-size:17px;line-height:2;color:var(--text);}
+.article-body p{margin-bottom:1.4em;}
+.article-body blockquote{background:#FDF0E8;border-left:4px solid var(--accent);padding:14px 18px;margin:1.2em 0 1.4em;border-radius:0 8px 8px 0;font-size:16px;color:#4A3830;}
+footer{background:#1A1814;color:rgba(255,255,255,0.5);text-align:center;padding:28px 24px;font-size:13px;line-height:2;}
+footer a{color:var(--accent);text-decoration:none;}
+.related{margin-top:3em;padding-top:2em;border-top:2px solid var(--border);}
+.related h2{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);}
+.related-list{display:grid;gap:12px;}
+.related-link{display:flex;gap:12px;text-decoration:none;color:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);transition:all 0.2s;}
+.related-link:hover{border-color:var(--accent);background:#FDF0E8;}
+.related-link img{width:120px;height:68px;object-fit:cover;border-radius:6px;flex-shrink:0;}
+.related-link .rl-text{display:flex;flex-direction:column;gap:4px;}
+.related-link .rl-cat{font-size:11px;color:var(--accent);font-weight:700;}
+.related-link .rl-title{font-size:15px;font-weight:500;line-height:1.4;}
+@media(max-width:600px){.article-wrap{padding:28px 16px 60px;}.related-link img{width:80px;height:45px;}}
+</style>
+</head>
+<body>
+<header><div class="hinner">
+<a href="../index.html" class="logo"><div class="logo-icon">IC</div><span class="logo-text">IC 觀點</span></a>
+<a href="../index.html" class="back-link">← 回首頁</a>
+</div></header>
+
+<img src="images/20260323-ai-paper-responsibility/cover.jpg" alt="AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來" class="hero-img">
+
+<div class="article-wrap">
+<div class="article-meta">
+  <span class="cat-badge">醫療教育</span>
+  <span class="meta-date">2026 年 3 月 23 日</span>
+</div>
+
+<h1>AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來</h1>
+
+<div class="article-body">
+
+<p>本週 Office Hour 時間為 3/24 週二晚上 8 點到 9 點。以下分享一個本週被問到的問題，以及我的回答。</p>
+
+<p>問：我試著用 AI 做了一篇統合分析，AI 跑了 PubMed 搜尋與統計，做了圖表，也寫出全文，加了參考文獻。我看架構很不錯，速度也很快，如果要去投稿 SCI 期刊的話，該注意什麼？</p>
+
+<p>答：如果同學是有 SCI 期刊發表的需求，需要注意以下幾點。</p>
+
+<p>第一，全步驟重現。投稿論文時，AI 可以協助文字編輯，但作者必須對所有分析負完全責任，包括能在任何時間點重現方法與結果。你自己要從文獻搜尋、數據萃取、統計、參考文獻檢核，都做過一次。如果你自己會做，也真的去做，然後有發現 AI 做錯，或者判斷與你不同的地方，並重新修正，那就可以。因為你實際上全部都做過一次，對過程完全掌握，只是使用 AI 做快速探勘的動作，那就沒問題。</p>
+
+<p>第二，全文負責。重寫全文時，使用你實際會的統計軟體，並寫上你實際的文獻搜索過程。目前學術界對於讓 AI 負責文獻搜尋跟統計，還是有很多保留。自己用都 OK，但學術論文發表要求 reproducibility，作者必須保證可重現性。</p>
+
+<p>簡單說，你可以反過來想：如果你投稿並幸運被接受刊出，在 PubMed 上看得到。日後如果有同樣對這個主題有興趣的人，或者你哪天要跟人競爭資源或主管缺時，有不同意見者要仔細檢查你的論文，你是否禁得起考驗。</p>
+
+<p>這不是我危言聳聽，事實上多位資深校友都遇過，各種研究計畫、論文、IRB，都有人取得並仔細檢驗，然後掀起一番腥風血雨。如果他們發現，用你的方法去做，無法重現出結果，而且差異還不小，並且直接寫致編者信給期刊社，接受刊登後，期刊社要求你這位原作者解釋，你是否能找出當時的筆記跟統計過程並回答？</p>
+
+<p>或甚至，如果期刊社直接去函到你工作的醫院或學校，要求研究倫理委員會檢驗這篇出自該院校的論文，而你必須準備資料到大會上向委員們報告，以決定是要懲處還是替你辯護，你是否能應付。</p>
+
+<blockquote>AI 最好的角色，是 research accelerator，而不是 research substitute。</blockquote>
+
+<p>它可以幫助你更快看見文獻大致狀況、更早建立思考架構，但最終的納入判斷、資料品質確認、統計模型選擇，以及對結果的詮釋，仍然是作者必須親自完成的工作。</p>
+
+<p>在學術發表的世界，速度帶來的是機會，但可重現性與責任，才決定你能不能長期留下來。</p>
+
+</div>
+
+<div class="related">
+<h2>延伸閱讀</h2>
+<div class="related-list">
+  <a href="resident-application-info.html" class="related-link">
+    <img src="images/resident-application-info/apply_R.png" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">醫療教育</span>
+      <span class="rl-title">關於 PGY 應徵住院醫師的一些現況，尤其熱門科。</span>
+    </div>
+  </a>
+  <a href="department-team-issues.html" class="related-link">
+    <img src="images/department-team-issues/running_physician.png" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">醫療教育</span>
+      <span class="rl-title">問：科部內積極者少，我很努力想推但推不動，怎麼辦？</span>
+    </div>
+  </a>
+  <a href="chatgpt-doctor-second-opinion.html" class="related-link">
+    <img src="images/chatgpt-doctor-second-opinion/cover.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">ChatGPT 說的跟你不一樣，醫師怎麼辦？</span>
+    </div>
+  </a>
+</div>
+</div>
+</div>
+
+<footer>
+  <div>© 2026 蔡依橙・IC 觀點 | <a href="../index.html">回首頁</a></div>
+</footer>
+</body>
+</html>

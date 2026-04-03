@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="蔡依橙">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ichentsai">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23C8602A'/%3E%3Ctext x='50' y='56' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='52' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZR4LYRZ7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4ZR4LYRZ7B");</script>
+<title>從入門到真的會用：我親身走過的三階段 AI 使用法 | IC 觀點</title>
+<meta name="description" content="先做你本來就在做的事，再試你曾經失敗但工具不夠好而放棄的事，最後才去啟動你想做但從來沒有開始的計畫。這三步，不只是使用 AI 的方法，也是讓你真正能 QC 成品的必要過程。">
+<meta name="keywords" content="AI,ChatGPT,Claude,AI工具,AI使用,減重,跑步,馬拉松,蔡依橙">
+<link rel="canonical" href="https://ichentsaitw.github.io/ic-blog/posts/20260325-ai-usage-method.html">
+<link rel="alternate" type="application/rss+xml" title="IC 觀點" href="https://ichentsaitw.github.io/ic-blog/feed.xml">
+<meta property="og:title" content="從入門到真的會用：我親身走過的三階段 AI 使用法">
+<meta property="og:description" content="先做你本來就在做的事，再試你曾經失敗但工具不夠好而放棄的事，最後才去啟動你想做但從來沒有開始的計畫。這三步，不只是使用 AI 的方法，也是讓你真正能 QC 成品的必要過程。">
+<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/posts/20260325-ai-usage-method.html">
+<meta property="og:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20260325-ai-usage-method/cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:title" content="從入門到真的會用：我親身走過的三階段 AI 使用法 | IC 觀點">
+<meta name="twitter:description" content="先做你本來就在做的事，再試你曾經失敗但工具不夠好而放棄的事，最後才去啟動你想做但從來沒有開始的計畫。">
+<meta name="twitter:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20260325-ai-usage-method/cover.jpg">
+<meta property="og:site_name" content="IC 觀點">
+<meta property="article:published_time" content="2026-03-25">
+<meta property="article:author" content="蔡依橙">
+<meta property="article:section" content="時事觀點">
+<style>
+:root{--accent:#C8602A;--text:#2C2825;--text-light:#6B6460;--bg:#F9F7F4;--border:#EAE4DC;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans TC",-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+header{position:sticky;top:0;z-index:100;background:#1A1814;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hinner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:16px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:13px;color:white;}
+.logo-text{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16px;color:white;}
+.back-link{margin-left:auto;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.back-link:hover{color:white;}
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#EEE;max-height:520px;}
+.article-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px;}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.cat-badge{background:var(--accent);color:white;font-size:11px;font-weight:700;letter-spacing:0.8px;padding:3px 10px;border-radius:12px;}
+.meta-date{font-size:13px;color:var(--text-light);}
+h1{font-family:"Noto Serif TC",serif;font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.4;letter-spacing:0.5px;margin-bottom:28px;}
+.article-body{font-size:17px;line-height:2;color:var(--text);}
+.article-body p{margin-bottom:1.4em;}
+.article-body blockquote{background:#FDF0E8;border-left:4px solid var(--accent);padding:14px 18px;margin:1.2em 0 1.4em;border-radius:0 8px 8px 0;font-size:16px;color:#4A3830;}
+footer{background:#1A1814;color:rgba(255,255,255,0.5);text-align:center;padding:28px 24px;font-size:13px;line-height:2;}
+footer a{color:var(--accent);text-decoration:none;}
+.related{margin-top:3em;padding-top:2em;border-top:2px solid var(--border);}
+.related h2{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);}
+.related-list{display:grid;gap:12px;}
+.related-link{display:flex;gap:12px;text-decoration:none;color:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);transition:all 0.2s;}
+.related-link:hover{border-color:var(--accent);background:#FDF0E8;}
+.related-link img{width:120px;height:68px;object-fit:cover;border-radius:6px;flex-shrink:0;}
+.related-link .rl-text{display:flex;flex-direction:column;gap:4px;}
+.related-link .rl-cat{font-size:11px;color:var(--accent);font-weight:700;}
+.related-link .rl-title{font-size:15px;font-weight:500;line-height:1.4;}
+@media(max-width:600px){.article-wrap{padding:28px 16px 60px;}.related-link img{width:80px;height:45px;}}
+</style>
+</head>
+<body>
+<header><div class="hinner">
+<a href="../index.html" class="logo"><div class="logo-icon">IC</div><span class="logo-text">IC 觀點</span></a>
+<a href="../index.html" class="back-link">← 回首頁</a>
+</div></header>
+
+<img src="images/20260325-ai-usage-method/cover.jpg" alt="從入門到真的會用：我親身走過的三階段 AI 使用法" class="hero-img">
+
+<div class="article-wrap">
+<div class="article-meta">
+  <span class="cat-badge">時事觀點</span>
+  <span class="meta-date">2026 年 3 月 25 日</span>
+</div>
+
+<h1>從入門到真的會用：我親身走過的三階段 AI 使用法</h1>
+
+<div class="article-body">
+
+<p>我建議的 AI 使用法，分三個步驟走，而且順序很重要。</p>
+
+<p>第一步：先思考你生活中有什麼「你正在做」的事情，能夠引入 AI 工具加速。第二步：再思考你曾經做過什麼事情，但這些「你曾做但失敗」的事情，以前因為工具不夠好而放棄的。</p>
+
+<p>以上兩個走完後，你也開始熟 AI 工具了。AI 成為你在思考事情的預設值，你就能開啟新的想像。而且，藉由以上兩個步驟，因為這些都是你思考過、甚至你熟的領域，你能檢核，所以你會知道 AI 在哪裡出包，AI 的問題是什麼，這樣才算是能夠使用 AI 且能做好成品 QC。</p>
+
+<blockquote>以上這段很重要，值得再讀一次。</blockquote>
+
+<p>第三步：用 AI 工具去完成「你想做但從來沒啟動過」的計畫。</p>
+
+<p>我自己的第一步驟，是緩步取代搜尋，並理解哪些事情還是搜尋比較精確，哪些事情可以問問看。通常有精確資訊的東西，直接搜尋還是比較快，問 AI 整合出來的東西會很奇怪。像是在日本用嘉信的卡領日圓現鈔，問 AI 講得信誓旦旦，但照做都不行，花了一個多小時非常苦惱。後來用搜尋，才找到一篇三年前的文章，寫得很清楚，到現在還是對的。</p>
+
+<p>第二步驟，則是減重。我以前用 App 算過熱量瘦下來，但覺得輸入很麻煩後來停了，於是復胖。我注意到 ChatGPT 的輸入跟自動計算，讓輸入的心理門檻降低很多，而且反應也很快。因為我之前研究過食物熱量與大營養素，在他算錯的時候我會發現且糾正，就這樣用了一年，順利減重 11%。</p>
+
+<p>過程中我也跑步，沒事跟他聊，也能提供情感支持。雖然我覺得不管是營養或運動，他給的建議還是聽聽就好，不見得準。像是他一直說馬拉松前的肝醣超補要吃很多白飯，但後來專業營養師說，那種補法是菁英運動員的補法，我們這種肌肉量普通的一般人吃那麼多碳水根本無法吸收。我的全馬經驗，營養師是對的。</p>
+
+<p>因此，我知道 AI 的建議就是建議，他們都只敢跟你說是 ChatGPT 或 Claude Chat，不敢自稱是 TruthGPT 或 Claude Truth，正是如此。就是聊聊而已。</p>
+
+<p>然後，我才開始第三步驟，最近開始在閱讀過程作為資訊收集輔助。因為我的主體還是閱讀，所以如果資訊收集怪異，我隨時都在互動，隨時警覺，這過程也多了很多「發現 AI 鬼扯」的經驗與直覺。然後我也開始讓 AI 去自動幫我做網站，也想看看他的資訊整理跟呈現能力。</p>
+
+<p>這是我目前的想法。至於最後附上的圖，是我找三家 AI 畫了又改，總共 10 張圖後挑出來的。怎樣找到適合自己的生圖流程，也是需要學習的。</p>
+
+</div>
+
+<div class="related">
+<h2>延伸閱讀</h2>
+<div class="related-list">
+  <a href="chatgpt-doctor-second-opinion.html" class="related-link">
+    <img src="images/chatgpt-doctor-second-opinion/cover.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">ChatGPT 說的跟你不一樣，醫師怎麼辦？</span>
+    </div>
+  </a>
+  <a href="roc-4.html" class="related-link">
+    <img src="images/roc-4/00_taipei101.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">【陪你看國際新聞】蛤？中華民國 4.0？</span>
+    </div>
+  </a>
+  <a href="black-bear-academy.html" class="related-link">
+    <img src="images/black-bear-academy/IMG_20230903_003512547_Femme.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">黑熊學院舉辦的藍鵲行動：戰亂時，你能成功移動到避難點嗎？</span>
+    </div>
+  </a>
+</div>
+</div>
+</div>
+
+<footer>
+  <div>© 2026 蔡依橙・IC 觀點 | <a href="../index.html">回首頁</a></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="蔡依橙">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ichentsai">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23C8602A'/%3E%3Ctext x='50' y='56' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='52' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZR4LYRZ7B"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4ZR4LYRZ7B");</script>
+<title>AI 給出錯誤答案，根源竟在人類知識體系本身 | IC 觀點</title>
+<meta name="description" content="AI 的幻覺不只是技術 Bug，更是人類知識不確定性在機器上的投影。訓練 AI 的人類語料本身就沒有共識——你認為的 AI 錯誤，是某些人腦中的真實。">
+<meta name="keywords" content="AI幻覺,LLM,人工智慧,ChatGPT,AI錯誤,蔡依橙,時事觀點">
+<link rel="canonical" href="https://ichentsaitw.github.io/ic-blog/posts/20251017-why-ai-makes-errors.html">
+<link rel="alternate" type="application/rss+xml" title="IC 觀點" href="https://ichentsaitw.github.io/ic-blog/feed.xml">
+<meta property="og:title" content="AI 給出錯誤答案，根源竟在人類知識體系本身">
+<meta property="og:description" content="AI 的幻覺不只是技術 Bug，更是人類知識不確定性在機器上的投影。訓練 AI 的人類語料本身就沒有共識。">
+<meta property="og:url" content="https://ichentsaitw.github.io/ic-blog/posts/20251017-why-ai-makes-errors.html">
+<meta property="og:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20251017-why-ai-makes-errors/cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:title" content="AI 給出錯誤答案，根源竟在人類知識體系本身 | IC 觀點">
+<meta name="twitter:description" content="AI 的幻覺不只是技術 Bug，更是人類知識不確定性在機器上的投影。">
+<meta name="twitter:image" content="https://ichentsaitw.github.io/ic-blog/posts/images/20251017-why-ai-makes-errors/cover.jpg">
+<meta property="og:site_name" content="IC 觀點">
+<meta property="article:published_time" content="2025-10-17">
+<meta property="article:author" content="蔡依橙">
+<meta property="article:section" content="時事觀點">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"AI 給出錯誤答案，根源竟在人類知識體系本身","author":{"@type":"Person","name":"蔡依橙"},"datePublished":"2025-10-17","image":"https://ichentsaitw.github.io/ic-blog/posts/images/20251017-why-ai-makes-errors/cover.jpg","publisher":{"@type":"Organization","name":"IC 觀點"}}
+</script>
+<style>
+:root{--accent:#C8602A;--text:#2C2825;--text-light:#6B6460;--bg:#F9F7F4;--border:#EAE4DC;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans TC",-apple-system,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+header{position:sticky;top:0;z-index:100;background:#1A1814;border-bottom:1px solid rgba(255,255,255,0.06);}
+.hinner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:16px;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:700;font-size:13px;color:white;}
+.logo-text{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16px;color:white;}
+.back-link{margin-left:auto;color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.back-link:hover{color:white;}
+.hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#EEE;max-height:520px;}
+.article-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px;}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.cat-badge{background:var(--accent);color:white;font-size:11px;font-weight:700;letter-spacing:0.8px;padding:3px 10px;border-radius:12px;}
+.meta-date{font-size:13px;color:var(--text-light);}
+h1{font-family:"Noto Serif TC",serif;font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.4;letter-spacing:0.5px;margin-bottom:28px;}
+.article-body{font-size:17px;line-height:2;color:var(--text);}
+.article-body p{margin-bottom:1.4em;}
+.article-body blockquote{background:#FDF0E8;border-left:4px solid var(--accent);padding:14px 18px;margin:1.2em 0 1.4em;border-radius:0 8px 8px 0;font-size:16px;color:#4A3830;}
+.article-body .img-credit{font-size:12px;color:#aaa;margin-top:2em;}
+footer{background:#1A1814;color:rgba(255,255,255,0.5);text-align:center;padding:28px 24px;font-size:13px;line-height:2;}
+footer a{color:var(--accent);text-decoration:none;}
+.related{margin-top:3em;padding-top:2em;border-top:2px solid var(--border);}
+.related h2{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;margin-bottom:16px;color:var(--text);}
+.related-list{display:grid;gap:12px;}
+.related-link{display:flex;gap:12px;text-decoration:none;color:inherit;padding:12px;border-radius:10px;border:1px solid var(--border);transition:all 0.2s;}
+.related-link:hover{border-color:var(--accent);background:#FDF0E8;}
+.related-link img{width:120px;height:68px;object-fit:cover;border-radius:6px;flex-shrink:0;}
+.related-link .rl-text{display:flex;flex-direction:column;gap:4px;}
+.related-link .rl-cat{font-size:11px;color:var(--accent);font-weight:700;}
+.related-link .rl-title{font-size:15px;font-weight:500;line-height:1.4;}
+@media(max-width:600px){.article-wrap{padding:28px 16px 60px;}.related-link img{width:80px;height:45px;}}
+</style>
+</head>
+<body>
+<header><div class="hinner">
+<a href="../index.html" class="logo"><div class="logo-icon">IC</div><span class="logo-text">IC 觀點</span></a>
+<a href="../index.html" class="back-link">← 回首頁</a>
+</div></header>
+
+<img src="images/20251017-why-ai-makes-errors/cover.jpg" alt="AI 給出錯誤答案，根源竟在人類知識體系本身" class="hero-img">
+
+<div class="article-wrap">
+<div class="article-meta">
+  <span class="cat-badge">時事觀點</span>
+  <span class="meta-date">2025 年 10 月 17 日</span>
+</div>
+
+<h1>AI 給出錯誤答案，根源竟在人類知識體系本身</h1>
+
+<div class="article-body">
+
+<p>當我們看到 AI 偶爾給出錯誤、矛盾或甚至是虛假訊息時（我們稱之為「幻覺」），這不只是單純的技術錯誤，其根源就在我們人類自己的知識體系中。</p>
+
+<blockquote>答案就在於：訓練 AI 的人類語料本身就沒有共識。你認為的 AI 錯誤，是某些人腦中的真實。</blockquote>
+
+<p>大型語言模型（LLM）從數以萬億計的網路文本、書籍和論文中學習。這個龐大的數據庫，並非只包含無爭議的「真理」，而是充滿了人類知識的所有面向：科學定論、宗教信仰、民間傳說，以及大量「不見得所有人都認同」的資訊。</p>
+
+<p>舉個例子：當你問「人類會不會有前世記憶？」時，AI 的語料庫中同時存在：科學共識認為意識源於大腦活動、死後消散；也有關於兒童自發性前世記憶的數千個案例研究；更有宗教與哲學觀點堅信輪迴是真實的。</p>
+
+<p>AI 並沒有人類的「信念」或「判斷力」。它會根據這些矛盾的資訊來生成回答，如果某個錯誤或缺乏共識的觀點在語料庫中佔了足夠的份量，AI 就有可能將多種矛盾的資訊「縫合」在一起，產生邏輯不通但語法流暢的內容。</p>
+
+<p>或者更糟的情況：「過度自信」地呈現某個非主流或錯誤的觀點，將其誤認為真理。</p>
+
+<p>AI 的錯誤，不只是技術上的 Bug，更是人類知識不確定性在機器上的投影。它提醒我們，知識並非一個完美的單一體系，而 AI 只是誠實地反映了我們世界中那些尚未解決的歧異與矛盾。</p>
+
+<p>這意味著，與其要求 AI 「不要犯錯」，不如我們自己先搞清楚：在哪些問題上，人類本身就沒有共識？在那些領域，AI 的任何答案都需要你帶著批判性思維去驗證。</p>
+
+<p class="img-credit">圖片來源：<a href="https://commons.wikimedia.org/wiki/File:Artificial_neural_network.png" target="_blank">Wikimedia Commons</a>，CC BY-SA 授權</p>
+
+</div>
+
+<div class="related">
+<h2>延伸閱讀</h2>
+<div class="related-list">
+  <a href="20251113-chatgpt-sycophancy-research.html" class="related-link">
+    <img src="images/20251113-chatgpt-sycophancy-research/cover.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">ChatGPT 說「是」的次數是說「否」的 10 倍：諂媚設計的隱患</span>
+    </div>
+  </a>
+  <a href="20251005-ai-sycophancy-vs-challenger.html" class="related-link">
+    <img src="images/20251005-ai-sycophancy-vs-challenger/cover.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">逢迎型 AI 和挑戰型 AI，哪個其實更有問題？</span>
+    </div>
+  </a>
+  <a href="20251013-ai-audit-firm-fiasco.html" class="related-link">
+    <img src="images/20251013-ai-audit-firm-fiasco/cover.jpg" alt="">
+    <div class="rl-text">
+      <span class="rl-cat">時事觀點</span>
+      <span class="rl-title">世界頂級會計師事務所也用 AI 亂寫，被退款了</span>
+    </div>
+  </a>
+</div>
+</div>
+</div>
+
+<footer>
+  <div>© 2026 蔡依橙・IC 觀點 | <a href="../index.html">回首頁</a></div>
+</footer>
+</body>
+</html>
