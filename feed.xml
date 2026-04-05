@@ -2,170 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IC 觀點</title>
-    <link>https://ichentsai.tw/ic-blog/</link>
+    <link>https://iclab.ichentsai.tw/ic-blog/</link>
     <description>蔡依橙的個人部落格。分享教養思考、閱讀筆記、醫療教育與時事觀點。</description>
     <language>zh-TW</language>
     <lastBuildDate>2026-04-03T00:00:00+08:00</lastBuildDate>
-    <atom:link href="https://ichentsai.tw/ic-blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://iclab.ichentsai.tw/ic-blog/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>從入門到真的會用：我親身走過的三階段 AI 使用法</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260325-ai-usage-method.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260325-ai-usage-method.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260325-ai-usage-method.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260325-ai-usage-method.html</guid>
     <pubDate>2026-03-25T00:00:00+08:00</pubDate>
     <description><![CDATA[先做你本來就在做的事，再試你曾經失敗但工具不夠好而放棄的事，最後才去啟動你想做但從來沒有開始的計畫。這三步，不只是使用 AI 的方法，也是讓你真正能 QC 成品的必要過程。用 AI 來減重、跑馬拉松、做網站，這些都是我實際走過的路。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260325-ai-usage-method/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260325-ai-usage-method/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>AI 愈來愈強，但真正的關鍵還是你的大腦</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260325-ai-brain-strength.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260325-ai-brain-strength.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260325-ai-brain-strength.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260325-ai-brain-strength.html</guid>
     <pubDate>2026-03-25T00:00:00+08:00</pubDate>
     <description><![CDATA[最近在測試使用各種 AI 工具時，我認為最關鍵的地方，還是「自己的認知」。閱讀受限於視覺頻寬，進入以後，還受限於每個人的認知與觀念改變可塑性。我幾乎都用 AI 來讓自己的大腦更強。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260325-ai-brain-strength/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260325-ai-brain-strength/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>AI 幫你寫論文？速度帶來機會，但可重現性決定你能不能留下來</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260323-ai-paper-responsibility.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260323-ai-paper-responsibility.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260323-ai-paper-responsibility.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260323-ai-paper-responsibility.html</guid>
     <pubDate>2026-03-23T00:00:00+08:00</pubDate>
     <description><![CDATA[如果期刊社直接去函到你工作的醫院或學校，要求研究倫理委員會檢驗這篇論文，你是否能應付？AI 最好的角色是 research accelerator，而不是 research substitute。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260323-ai-paper-responsibility/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260323-ai-paper-responsibility/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>用 Claude Code MAX 測試論文數據萃取，錯誤率讓我驚了</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260321-claude-code-data-extraction.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260321-claude-code-data-extraction.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260321-claude-code-data-extraction.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260321-claude-code-data-extraction.html</guid>
     <pubDate>2026-03-21T00:00:00+08:00</pubDate>
     <description><![CDATA[13 篇文獻，他只用 9 篇。把自己的論文 PDF 傳給他叫他仔細研究自己犯了什麼錯，截圖出來的表格錯誤率頗高。你怎麼知道他未來就不會犯新的錯誤呢？]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260321-claude-code-data-extraction/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260321-claude-code-data-extraction/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>市場不再是最大考量，地緣政治才是：科技新創的覺醒</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260320-geopolitics-startup.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260320-geopolitics-startup.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260320-geopolitics-startup.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260320-geopolitics-startup.html</guid>
     <pubDate>2026-03-20T00:00:00+08:00</pubDate>
     <description><![CDATA[ChatGPT 停止服務中港，Palantir 把地緣政治立場變成企業定位，aespa 因中國成員在日本引發爭議。我們正進入一個政治表態逐漸正常化的新時代。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260320-geopolitics-startup/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260320-geopolitics-startup/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>搞錯試映會時間，卻還是當場買票進場——《極限返航》就是這樣好看</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260319-extreme-return-novel.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260319-extreme-return-novel.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260319-extreme-return-novel.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260319-extreme-return-novel.html</guid>
     <pubDate>2026-03-19T00:00:00+08:00</pubDate>
     <description><![CDATA[《極限返航》是同名小說的改編電影。我是很少看小說的人，但當時因緣際會拿起來翻了兩頁之後，晚上就熬夜看完了。看完電影的心得是：真的非常值得。小說強在科學論述，電影強在情感。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260319-extreme-return-novel/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260319-extreme-return-novel/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>ChatGPT 說的跟你不一樣，醫師怎麼辦？</title>
-    <link>https://ichentsai.tw/ic-blog/posts/chatgpt-doctor-second-opinion.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/chatgpt-doctor-second-opinion.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/chatgpt-doctor-second-opinion.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/chatgpt-doctor-second-opinion.html</guid>
     <pubDate>2026-03-19T00:00:00+08:00</pubDate>
     <description><![CDATA[在診間想一句話激怒醫師，現在最流行的是：「可是 ChatGPT 不是這麼說的。」當客戶去問 AI 做 second opinion，比去問另一位真人顧問，更容易讓專業人士感到被冒犯——這件事的本質，不是資訊來源，而是信任結構的改變。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/chatgpt-doctor-second-opinion/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/chatgpt-doctor-second-opinion/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>葛飾北齋：天才的詛咒，是只能活在自己的才華裡</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260318-katsushika-hokusai.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260318-katsushika-hokusai.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260318-katsushika-hokusai.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260318-katsushika-hokusai.html</guid>
     <pubDate>2026-03-18T00:00:00+08:00</pubDate>
     <description><![CDATA[一個人搬了 90 次家，理財失敗窮困潦倒，女兒眼界太高嫌老公畫不好而離婚——但他的創作生命力無窮。才華要分散到人生各面向，取得平衡，才是遠離艱困的秘訣。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260318-katsushika-hokusai/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260318-katsushika-hokusai/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>才華放對地方，人生才走得對：給大人與孩子的共同功課</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260316-talent-parenting.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260316-talent-parenting.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260316-talent-parenting.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260316-talent-parenting.html</guid>
     <pubDate>2026-03-16T00:00:00+08:00</pubDate>
     <description><![CDATA[他們會把精力投入到自己覺得被尊重、被需要的領域去。如果說什麼做什麼師長爸媽給的都是負評，他自然會去找願意給他成就感的領域。我們最該做的，就是孩子特性的觀察，以及協助他們與這個世界有效的媒合。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260316-talent-parenting/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260316-talent-parenting/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>流量高，但都是錯的人：專業品牌經營最常見的陷阱</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260312-traffic-vs-conversion.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260312-traffic-vs-conversion.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260312-traffic-vs-conversion.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260312-traffic-vs-conversion.html</guid>
     <pubDate>2026-03-12T00:00:00+08:00</pubDate>
     <description><![CDATA[在不對的戰場，或者用不對的內容去經營，只會得到不對的轉換。短影音是感官先決，追蹤則是情緒先決，專業服務卻幾乎都是成效先決。工作已經很忙，值得稍加思考並規劃。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260312-traffic-vs-conversion/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260312-traffic-vs-conversion/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>用「狼人殺」說透人性：《Gnosia》動畫為何讓人看完久久無法釋懷</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260310-gnosia-anime.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260310-gnosia-anime.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260310-gnosia-anime.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260310-gnosia-anime.html</guid>
     <pubDate>2026-03-10T00:00:00+08:00</pubDate>
     <description><![CDATA[表面上它是一個科幻推理故事，但看著看著，會發現裡面其實有很多值得慢慢咀嚼的人生況味。它不是在問「誰是壞人」，而是在問：人類群體為什麼總需要一個壞人？]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260310-gnosia-anime/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260310-gnosia-anime/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>從 0 到 1：本月 80 位學員成功發表，6 人解開生涯第一篇</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260309-publication-monthly.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260309-publication-monthly.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260309-publication-monthly.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260309-publication-monthly.html</guid>
     <pubDate>2026-03-09T00:00:00+08:00</pubDate>
     <description><![CDATA[本月 80 位發表學員中，9 位完成課程後首篇發表，6 位從無到有解鎖生涯第一篇。每一篇論文背後，都是一段跨越恐懼的旅程。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260309-publication-monthly/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260309-publication-monthly/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>150 億日圓的豪賭：Netflix 搶下 WBC 獨家轉播，如何從眾矢之的變口碑逆轉</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260309-netflix-wbc.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260309-netflix-wbc.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260309-netflix-wbc.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260309-netflix-wbc.html</guid>
     <pubDate>2026-03-09T00:00:00+08:00</pubDate>
     <description><![CDATA[Netflix 砸五倍價格買下 WBC 日本獨家轉播，73% 日本網友失望、運動酒吧無法播出。但最終口碑逆轉，成為討論焦點。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260309-netflix-wbc/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260309-netflix-wbc/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>審了四次都還要改？MDPI 的審稿策略轉變，讓我決定降低接案比例</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260306-mdpi-review.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260306-mdpi-review.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260306-mdpi-review.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260306-mdpi-review.html</guid>
     <pubDate>2026-03-06T00:00:00+08:00</pubDate>
     <description><![CDATA[MDPI 審稿原本給 reject 就結束，最近卻開始讓作者一改再改，同一篇稿子我審了四次。這個策略轉變讓我決定降低接案比例。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260306-mdpi-review/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260306-mdpi-review/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>長崎的電龍，真的跟 Fat Man 有關嗎？官方不說，但符號自己會說話</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260228-nagasaki-pokemon.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260228-nagasaki-pokemon.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260228-nagasaki-pokemon.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260228-nagasaki-pokemon.html</guid>
     <pubDate>2026-02-28T00:00:00+08:00</pubDate>
     <description><![CDATA[長崎未來應援寶可夢選了電龍，黑黃配色、圓潤造型、「光」的意象——在廣島選了耿鬼之後，這個選擇很難不讓人多想。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260228-nagasaki-pokemon/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260228-nagasaki-pokemon/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>細川伽羅奢：用死亡捍衛信仰，反而削弱了西軍政治正當性</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260228-hosokawa-gracia.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260228-hosokawa-gracia.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260228-hosokawa-gracia.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260228-hosokawa-gracia.html</guid>
     <pubDate>2026-02-28T00:00:00+08:00</pubDate>
     <description><![CDATA[明智光秀的女兒，皈依天主教的細川伽羅奢，在關原之戰前夕拒絕成為人質，選擇以死明志。她的選擇改變了歷史的走向。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260228-hosokawa-gracia/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260228-hosokawa-gracia/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>Kokura's Luck：長崎原爆背後，一連串改變歷史的偶然</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260227-kokura-luck.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260227-kokura-luck.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260227-kokura-luck.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260227-kokura-luck.html</guid>
     <pubDate>2026-02-27T00:00:00+08:00</pubDate>
     <description><![CDATA[長崎原爆並非原定計畫。B29 三度繞行小倉上空，因隔日轟炸留下的煙塵無法瞄準，才轉向長崎。偶然，決定了誰活下來。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260227-kokura-luck/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260227-kokura-luck/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>沒原則的錢賺得快，但最後都要還：在喧嘩時代，細水長流的選擇</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260213-principle-money.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260213-principle-money.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260213-principle-money.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260213-principle-money.html</guid>
     <pubDate>2026-02-13T00:00:00+08:00</pubDate>
     <description><![CDATA[這個時代，越有爭議、越沒原則的錢，賺得越快。但最後總會還的。晚上能不能睡著，是判斷一件事值不值得做的重要指標。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260213-principle-money/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260213-principle-money/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>腦力工作耗盡的不是卡路里，而是你能高品質訓練的中樞資源</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260210-brain-fatigue.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260210-brain-fatigue.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260210-brain-fatigue.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260210-brain-fatigue.html</guid>
     <pubDate>2026-02-10T00:00:00+08:00</pubDate>
     <description><![CDATA[高強度腦力工作幾乎不讓人流汗，但一天下來什麼都不想做。運動科學研究發現，腦疲勞會顯著降低你能承受的訓練強度。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260210-brain-fatigue/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260210-brain-fatigue/cover.jpg" type="image/jpeg"/>
   </item>
   <item>
     <title>跑步機上的 reset：ABC 健行、Annapurna，以及死亡率最高的八千峰</title>
-    <link>https://ichentsai.tw/ic-blog/posts/20260209-annapurna-run.html</link>
-    <guid>https://ichentsai.tw/ic-blog/posts/20260209-annapurna-run.html</guid>
+    <link>https://iclab.ichentsai.tw/ic-blog/posts/20260209-annapurna-run.html</link>
+    <guid>https://iclab.ichentsai.tw/ic-blog/posts/20260209-annapurna-run.html</guid>
     <pubDate>2026-02-09T00:00:00+08:00</pubDate>
     <description><![CDATA[生活忙碌時，跑步機讓我 reset 並放鬆。最近在跑步機上看 ABC 安那普爾納基地營紀錄片，那座山的死亡率數字讓我震驚。]]></description>
-    <enclosure url="https://ichentsai.tw/ic-blog/posts/images/20260209-annapurna-run/cover.jpg" type="image/jpeg"/>
+    <enclosure url="https://iclab.ichentsai.tw/ic-blog/posts/images/20260209-annapurna-run/cover.jpg" type="image/jpeg"/>
   </item>
   </channel>
 </rss>
